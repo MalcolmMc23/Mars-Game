@@ -31,6 +31,7 @@ class Hero {
     if(this.isColliding === true) {
       this.vel.y = 0;
       this.loc.y = this.pLevel - 10;
+      jumpcount = 0;
     } else {
     this.isColliding === false;
   }
