@@ -12,11 +12,11 @@ const bgImg = [];
 function preload() {
 
   for(let i = 0 ; i < 5 ; i++) {
-    bgImgs[i] = loadImage("images/background/b" + i + ".png")
+    bgImg[i] = loadImage("images/background/b" + i + ".png")
   }
 
   for(let i = 0 ; i < 5 ; i++) {
-    heroImgs[i] = loadImage("images/hero/h" + i + ".png")
+    heroImg[i] = loadImage("images/hero/h" + i + ".png")
   }
 }
 
