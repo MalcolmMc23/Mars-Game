@@ -8,15 +8,17 @@ let rGame;
 const heroImg = [];
 const bgImg = [];
 
-
 function preload() {
+  //   for(let i = 0 ; i < 5 ; i++) {
+  //     bgImg[i] = loadImage("images/background/b" + i + ".png")
+  //   }
 
-  for(let i = 0 ; i < 5 ; i++) {
-    bgImg[i] = loadImage("images/background/b" + i + ".png")
-  }
+  //   for(let i = 0 ; i < 5 ; i++) {
+  //     heroImg[i] = loadImage("images/hero/h" + i + ".png")
+  //   }
 
-  for(let i = 0 ; i < 5 ; i++) {
-    heroImg[i] = loadImage("images/hero/h" + i + ".png")
+  for (let i = 0; i < 5; i++) {
+    bgImg[i] = loadImage("img_place_holder" + i + ".png");
   }
 }
 

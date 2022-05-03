@@ -1,18 +1,20 @@
 class Game {
-  constructor() {
+  constructor(heroImg, bgImg) {
     this.gameState = 1;
     this.lvl = 1;
 
     this.bg;
+    this.bgImg = bgImg;
     this.hero;
+    this.heroImg = heroImg;
 
     this.initGame();
   }
 
   initGame() {
     //$$$$$ add platforms
-    this.bg = new Bg(bgImg);
-    this.hero = new Hero(heroImg);
+    this.bg = new Bg(this.bgImg);
+    this.hero = new Hero(this.heroImg);
   }
 
   run() {
