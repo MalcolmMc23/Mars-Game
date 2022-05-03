@@ -1,6 +1,5 @@
 class Platform {
   constructor(x, y) {
-    this.loc = createVector(x,y);
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0,0);
 
@@ -16,15 +15,33 @@ class Platform {
     this.loc.add(this.vel);
 
     this.vel.limit(10);
-    if(this.loc.x + 50 < 10){
-      this.loc.x = width + random(25);
-      this.loc.y = random(height);
     }
   }
 //++++++++++++++++++++++++++++++++++++++++++++Color and Location
   render() {
     fill(0, 100, 240);
-    rect(this.loc.x, this.loc.y, 40, 10);
+    rect(50, 150, 40, 10);
+
+    fill(0, 100, 240);
+    rect(100, 200, 40, 10);
+
+    fill(0, 100, 240);
+    rect(150, 250, 40, 10);
+
+    fill(0, 100, 240);
+    rect(200, 300, 40, 10);
+
+    fill(0, 100, 240);
+    rect(250, 350, 40, 10);
+
+    fill(0, 100, 240);
+    rect(300, 400, 40, 10);
+
+    fill(0, 100, 240);
+    rect(350, 450, 40, 10);
+
+    fill(0, 100, 240);
+    rect(400, 500, 40, 10);
   }
 //++++++++++++++++++++++++++++++++++++++++++Platforms move with arrow keys
   move() {
