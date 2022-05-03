@@ -1,5 +1,6 @@
 //Mars Game
-//Malcolm McDoanld, Shane, other group members
+// Coders: Malcolm McDoanld and Shane Frey
+// Artists: Keana, Isaiah, and Lucas
 // 5/2/22
 
 // globals
@@ -7,19 +8,23 @@ let rGame;
 const heroImg = [];
 const bgImg = [];
 
+
 function preload() {
-  // for (let i = 0; i < @@ number of images @@; i++) {
-  //     bgImg[i] = loadImage("@@ file name @@" + 1 + ".png")
-  // }
-  // for (let i = 0; i < @@ number of imiages @@; i++) {
-  //     heroImg[i] = loadImage("@@ file name @@" + 1 + ".png")
-  // }
+
+  for(let i = 0 ; i < 5 ; i++) {
+    bgImgs[i] = loadImage("images/background/b" + i + ".png")
+  }
+
+  for(let i = 0 ; i < 5 ; i++) {
+    heroImgs[i] = loadImage("images/hero/h" + i + ".png")
+  }
 }
 
 function setup() {
   var cnv = createCanvas(900, 600);
   cnv.position((windowWidth - width) / 2, 10);
   rGame = new Game(heroImg, bgImg);
+  frameRate(30);
 }
 
 function draw() {
@@ -28,8 +33,8 @@ function draw() {
 }
 
 function keyPressed() {
-  if (keyCode === 32)
-    [
-      // @@ add jump function
-    ];
+  if (keyCode(UP_ARROW)) {
+    game.hero.vel.y = -4;
+    game.hero.acc.y = 0.1;
+  }
 }
