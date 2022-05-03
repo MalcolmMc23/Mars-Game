@@ -1,6 +1,7 @@
 class Hero {
   constructor() {
     this.loc = createVector();
+    this.vel - creatVector();
   }
 
   run() {
