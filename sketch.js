@@ -7,6 +7,7 @@
 let rGame;
 const heroImg = [];
 const bgImg = [];
+let jumpcount = 0;
 
 function preload() {
   //   for(let i = 0 ; i < 5 ; i++) {
@@ -38,5 +39,9 @@ function keyPressed() {
   if (keyCode(UP_ARROW)) {
     game.hero.vel.y = -4;
     game.hero.acc.y = 0.1;
+    jumpcount + 1;
+  }
+  if(jumpcount >= 2) {
+    game.hero.vel.y = 0;
   }
 }

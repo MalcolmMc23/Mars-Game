@@ -10,12 +10,10 @@ class Platform {
     this.render();
     this.move();
   }
-//+++++++++++++++++++++++++++++++++++++++Teleport the platforms to the other side
-  update(){
-    this.loc.add(this.vel);
 
+  update() {
     this.vel.limit(10);
-    }
+    
   }
 //++++++++++++++++++++++++++++++++++++++++++++Color and Location
   render() {
