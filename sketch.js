@@ -19,7 +19,7 @@ function preload() {
   //   }
 
   for (let i = 0; i < 5; i++) {
-    bgImg[i] = loadImage("img_place_holder" + i + ".png");
+    bgImg[i] = loadImage("place_holder_imgs/background" + i + ".png");
   }
 }
 
@@ -41,7 +41,7 @@ function keyPressed() {
     game.hero.acc.y = 0.1;
     jumpcount + 1;
   }
-  if(jumpcount >= 2) {
+  if (jumpcount >= 2) {
     game.hero.vel.y = 0;
   }
 }
