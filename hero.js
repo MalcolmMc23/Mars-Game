@@ -4,7 +4,6 @@ class Hero {
     this.loc = createVector(100, 100);
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0, 0);
-    this.isColliding = false;
     this.pLevel;
     this.hCount = 0;
     this.jumpcount = 0;
@@ -13,13 +12,14 @@ class Hero {
   run() {
     this.update();
     this.render();
-  //  this.isColliding = this.collisions();
-    console.log('hello hero')
+    if (this.isColliding()) {
+      this.vel = createVector(0, 0);
+    }
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
-      fill(225, 20, 100);
-      ellipse(this.loc.x, this.loc.y, 15, 15);
+    fill(225, 20, 100);
+    ellipse(this.loc.x, this.loc.y, 15, 15);
     image(heroImg[this.hCount], this.loc.x - 13, this.loc.y - 20);
     if (++this.hCount >= 5) {
       this.hCount = 0;
@@ -42,7 +42,7 @@ class Hero {
   }
 
   //++++++++++++++++++++++++++++++When the hero hits the platform from above or below
-  collisions() {
+  isColliding() {
     for (let i = 0; i < 20; i++) {
       if (
         this.loc.y + 7.6 > rGame.platforms[i].loc.y &&
@@ -59,8 +59,8 @@ class Hero {
   }
 
   jump() {
-      this.vel.y = -4;
-      this.acc.y = 0.1;
-      this.jumpcount++;
+    this.vel.y = -4;
+    this.acc.y = 0.1;
+    this.jumpcount++;
   }
 }

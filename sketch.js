@@ -13,9 +13,9 @@ function preload() {
   //     bgImg[i] = loadImage("images/background/b" + i + ".png")
   //   }
 
-     for(let i = 0 ; i < 5 ; i++) {
-       heroImg[i] = loadImage("hero/h" + i + ".png")
-     }
+  for (let i = 0; i < 5; i++) {
+    heroImg[i] = loadImage("hero/h" + i + ".png");
+  }
 
   for (let i = 0; i < 5; i++) {
     bgImg[i] = loadImage("background/b" + i + ".png");
@@ -27,7 +27,6 @@ function setup() {
   cnv.position((windowWidth - width) / 2, 10);
   rGame = new Game(heroImg, bgImg);
   frameRate(30);
-  console.log(keyCode)
 }
 
 function draw() {
@@ -36,7 +35,7 @@ function draw() {
 }
 
 function keyPressed() {
-  if(keyIsDown(UP_ARROW)) {
+  if (keyIsDown(UP_ARROW)) {
     if (rGame.hero.jumpcount < 2) {
       rGame.hero.jump();
     }
