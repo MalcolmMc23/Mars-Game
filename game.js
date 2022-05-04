@@ -25,13 +25,14 @@ class Game {
   updateGame() {}
 
   renderGame() {
-    if (this.gameState === 1) {
-      this.sGame();
-    } else if (this.gameState === 2) {
-      this.pGame();
-    } else if (this.gameState === 3) {
-      eGame();
-    }
+    // if (this.gameState === 1) {
+    //   this.sGame();
+    // } else if (this.gameState === 2) {
+    //   this.pGame();
+    // } else if (this.gameState === 3) {
+    //   eGame();
+    // }
+    this.pGame();
   }
 
   sGame() {
