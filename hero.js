@@ -1,3 +1,4 @@
+//Mars Game
 class Hero {
   constructor(heroImg) {
     this.loc = createVector(100, 100);
@@ -12,7 +13,7 @@ class Hero {
   run() {
     this.update();
     this.render();
-    this.isColliding = this.collisions();
+  //  this.isColliding = this.collisions();
     console.log('hello hero')
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite

@@ -1,3 +1,4 @@
+//Mars Game
 class Platform {
   constructor(x, y) {
     this.acc = createVector(0, 0.1);
@@ -13,7 +14,7 @@ class Platform {
 
   update() {
     this.vel.limit(10);
-    
+
   }
 //++++++++++++++++++++++++++++++++++++++++++++Color and Location
   render() {
