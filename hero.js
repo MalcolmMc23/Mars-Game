@@ -62,5 +62,6 @@ class Hero {
       this.vel.y = -4;
       this.acc.y = 0.1;
       this.jumpcount++;
+    }
   }
 }
