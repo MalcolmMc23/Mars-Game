@@ -36,8 +36,8 @@ class Bg {
       image(this.bgImg[1], this.loc3.x, height - this.bgImg[1].height);
       image(this.bgImg[1], this.loc4.x, height - this.bgImg[1].height);
 
-      image(this.img[2], this.loc5.x, height - this.img[2].height);
-      image(this.img[2], this.loc6.x, height - this.bgImg[2].height);
+      image(this.bgImg[2], this.loc5.x, height - this.bgImg[2].height);
+      image(this.bgImg[2], this.loc6.x, height - this.bgImg[2].height);
 
       image(this.bgImg[3], this.loc7.x, height - this.bgImg[3].height);
       image(this.bgImg[3], this.loc8.x, height - this.bgImg[3].height);
