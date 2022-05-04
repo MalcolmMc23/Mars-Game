@@ -1,5 +1,5 @@
 class Hero {
-  constructor(x, y) {
+  constructor(heroImg) {
     this.loc = createVector(100, 100);
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0, 0);
@@ -19,7 +19,7 @@ class Hero {
   render() {
       fill(225, 20, 100);
       ellipse(this.loc.x, this.loc.y, 15, 15);
-    image(heroImgs[this.hCount], this.loc.x, this.loc.y);
+    image(heroImg[this.hCount], this.loc.x - 13, this.loc.y - 20);
     if (++this.hCount >= 5) {
       this.hCount = 0;
     }
