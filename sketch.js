@@ -18,7 +18,7 @@ function preload() {
   //   }
 
   for (let i = 0; i < 5; i++) {
-    bgImg[i] = loadImage("place_holder_imgs/background/b" + i + ".png");
+    bgImg[i] = loadImage("testBg/background/b" + i + ".png");
   }
 }
 
