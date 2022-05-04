@@ -1,6 +1,6 @@
 class Hero {
   constructor(x, y) {
-    this.loc = createVector(x, y);
+    this.loc = createVector(100, 100);
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0, 0);
     this.isColliding = false;
@@ -58,10 +58,8 @@ class Hero {
   }
 
   jump() {
-     if (keyCode(UP_ARROW)) {
       this.vel.y = -4;
       this.acc.y = 0.1;
       this.jumpcount++;
-    }
   }
 }

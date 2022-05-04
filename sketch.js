@@ -27,6 +27,7 @@ function setup() {
   cnv.position((windowWidth - width) / 2, 10);
   rGame = new Game(heroImg, bgImg);
   frameRate(30);
+  console.log(keyCode)
 }
 
 function draw() {
@@ -35,8 +36,8 @@ function draw() {
 }
 
 function keyPressed() {
-  if (rGame.hero.jumpcount < 2) {
-    if (keyCode(UP_ARROW)) {
+  if(keyIsDown(UP_ARROW)) {
+    if (rGame.hero.jumpcount < 2) {
       rGame.hero.jump();
     }
   }
