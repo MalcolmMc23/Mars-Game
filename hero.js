@@ -6,7 +6,6 @@ class Hero {
     this.isColliding = false;
     this.pLevel;
     this.hCount = 0;
-    this.heroframeRate = frameRate;
     this.jumpcount = 0;
   }
 
