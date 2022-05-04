@@ -10,11 +10,8 @@ class Hero {
   }
 
   run() {
-    this.update();
     this.render();
-    if (this.isColliding()) {
-      this.vel = createVector(0, 0);
-    }
+    this.update();
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
@@ -27,14 +24,11 @@ class Hero {
   }
   //+++++++++++++++++++++++++++++++++++++++++++++++Colliding code
   update() {
-    if (this.isColliding === true) {
+    if (this.isColliding()) {
       this.vel.y = 0;
-      this.loc.y = this.pLevel - 10;
-      jumpcount = 0;
-    } else {
-      this.isColliding === false;
-    }
-    if (this.isColliding === false) {
+      // this.loc.y = this.pLevel - 10;
+      this.jumpcount = 0;
+    } else if (this.isColliding() === false) {
       this.loc.add(this.vel);
       this.vel.add(this.acc);
       this.vel.limit(10);
