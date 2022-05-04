@@ -13,11 +13,12 @@ class Hero {
     this.update();
     this.render();
     this.isColliding = this.collisions();
+    console.log('hello hero')
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
-    //  fill(225, 20, 100);
-    //  ellipse(this.loc.x, this.loc.y, 15, 15);
+      fill(225, 20, 100);
+      ellipse(this.loc.x, this.loc.y, 15, 15);
     image(heroImgs[this.hCount], this.loc.x, this.loc.y);
     if (++this.hCount >= 5) {
       this.hCount = 0;
