@@ -18,7 +18,7 @@ function preload() {
   //   }
 
   for (let i = 0; i < 5; i++) {
-    bgImg[i] = loadImage("testBg/background/b" + i + ".png");
+    bgImg[i] = loadImage("background/b" + i + ".png");
   }
 }
 
