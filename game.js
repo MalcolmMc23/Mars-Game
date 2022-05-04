@@ -8,6 +8,8 @@ class Game {
     this.hero;
     this.heroImg = heroImg;
 
+    this.platform;
+
     this.initGame();
   }
 
@@ -15,6 +17,7 @@ class Game {
     //$$$$$ add platforms
     this.bg = new Bg(this.bgImg);
     this.hero = new Hero(this.heroImg);
+    this.platform = new Platform();
   }
 
   run() {
@@ -53,5 +56,6 @@ class Game {
   lvl1() {
     this.bg.run();
     this.hero.run();
+    this.platform.run();
   }
 }

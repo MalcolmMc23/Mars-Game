@@ -47,5 +47,22 @@ class Bg {
     }
   }
 
-  update() {}
+  update() {
+    if (keyIsDown(RIGHT_ARROW)) {
+      this.loc1.sub(this.vel1);
+      this.loc2.sub(this.vel1);
+
+      this.loc3.sub(this.vel2);
+      this.loc4.sub(this.vel2);
+
+      this.loc5.sub(this.vel3);
+      this.loc6.sub(this.vel3);
+
+      this.loc7.sub(this.vel4);
+      this.loc8.sub(this.vel4);
+
+      this.loc9.sub(this.vel5);
+      this.loc10.sub(this.vel5);
+    }
+  }
 }
