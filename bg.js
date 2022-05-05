@@ -124,6 +124,9 @@ class Bg {
     if (this.loc6.x < -width) {
       this.loc6.x = width * 2;
     }
+    if (this.loc6.x > width * 2) {
+      this.loc6.x = -width;
+    }
 
     if (this.loc7.x <= -width) {
       this.loc7.x = width;
@@ -132,8 +135,8 @@ class Bg {
       this.loc8.x = width;
     }
 
-    if (this.loc9.x < -width) {
-      this.loc9.x = width * 2;
+    if (this.loc9.x > width * 2) {
+      this.loc9.x = -width;
     }
     if (this.loc10.x <= -width) {
       this.loc10.x = width;
@@ -141,8 +144,8 @@ class Bg {
     if (this.loc11.x <= -width) {
       this.loc11.x = width;
     }
-    if (this.loc12.x < -width) {
-      this.loc12.x = width * 2;
+    if (this.loc12.x > width * 2) {
+      this.loc12.x = -width;
     }
     if (this.loc13.x <= -width) {
       this.loc13.x = width;
@@ -150,8 +153,8 @@ class Bg {
     if (this.loc14.x <= -width) {
       this.loc14.x = width;
     }
-    if (this.loc15.x < -width) {
-      this.loc15.x = width * 2;
+    if (this.loc15.x > width * 2) {
+      this.loc15.x = -width;
     }
   }
 }
