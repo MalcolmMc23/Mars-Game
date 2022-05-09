@@ -7,17 +7,29 @@ class Game {
     this.bgImg = bgImg;
     this.hero;
     this.heroImg = heroImg;
-
-    this.platform;
+    this.platforms =[];
+    //this.platform;
 
     this.initGame();
   }
+
+
 
   initGame() {
     //$$$$$ add platforms
     this.bg = new Bg(this.bgImg);
     this.hero = new Hero(this.heroImg);
-    this.platform = new Platform();
+    //this.platform = new Platform();
+    this.loadPlatforms(6);
+  }
+
+  loadPlatforms(n){
+
+
+      this.platforms.push(new Platform(x, y, r))
+
+
+
   }
 
   run() {
