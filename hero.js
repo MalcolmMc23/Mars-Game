@@ -49,13 +49,12 @@ class Hero {
   isColliding() {
     for (let i = 0; i < 20; i++) {
       if (
-        // this.loc.y + 7.6 > rGame.platforms[i].loc.y &&
-        // this.loc.y + 7.6 < rGame.platforms[i].loc.y + 10 &&
-        // this.loc.x + 7.6 > rGame.platforms[i].loc.x &&
-        // this.loc.x + 7.6 < rGame.platforms[i].loc.x + 40
-        this.loc.x === this.loc.x
+        this.loc.y + 7.6 > rGame.platform[i].loc.y &&
+        this.loc.y + 7.6 < rGame.platform[i].loc.y + 10 &&
+        this.loc.x + 7.6 > rGame.platform[i].loc.x &&
+        this.loc.x + 7.6 < rGame.platform[i].loc.x + 40
       ) {
-        // this.pLevel = rGame.platforms[i].loc.y;
+        this.pLevel = rGame.platform[i].loc.y;
         return true;
       }
     }

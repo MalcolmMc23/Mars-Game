@@ -39,7 +39,6 @@ class Game {
     this.platform.push(new Platform(700, 400, 0, 0, 0, 0));
     this.platform.push(new Platform(750, 450, 0, 0, 0, 0));
     this.platform.push(new Platform(800, 500, 0, 0, 0, 0));
-
   }
 
   run() {
@@ -77,9 +76,9 @@ class Game {
 
   lvl1() {
     this.bg.run();
-    this.hero.run();
     for (let i = 0; i < this.platform.length; i++) {
       this.platform[i].run();
     }
+    this.hero.run();
   }
 }
