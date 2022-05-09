@@ -1,6 +1,6 @@
 //Mars Game
 class Platform {
-  constructor(x, y) {
+  constructor(x, y, r, o, f, e) {
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0,0);
     this.platform = []
