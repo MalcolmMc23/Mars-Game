@@ -7,29 +7,24 @@ class Game {
     this.bgImg = bgImg;
     this.hero;
     this.heroImg = heroImg;
-    this.platforms =[];
+    this.platform = [];
     //this.platform;
 
     this.initGame();
   }
-
-
 
   initGame() {
     //$$$$$ add platforms
     this.bg = new Bg(this.bgImg);
     this.hero = new Hero(this.heroImg);
     //this.platform = new Platform();
-    this.loadPlatforms(6);
+    this.loadPlatform(6);
   }
 
-  loadPlatforms(n){
-
-
-      this.platforms.push(new Platform(x, y, r))
-
-
-
+  loadPlatform(n) {
+    // this.platforms.push(new Platform(x, y, r, o, f, e))
+    this.platform.push(new Platform(100, 200, 0, 0, 0, 0));
+    // this.platforms.push(new Platform(x, y, r))
   }
 
   run() {
@@ -68,6 +63,8 @@ class Game {
   lvl1() {
     this.bg.run();
     this.hero.run();
-    this.platform.run();
+    for (let i = 0; i < this.platform.length; i++) {
+      this.platform[i].run();
+    }
   }
 }
