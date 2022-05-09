@@ -18,7 +18,7 @@ class Game {
     this.bg = new Bg(this.bgImg);
     this.hero = new Hero(this.heroImg);
     //this.platform = new Platform();
-    this.loadPlatform(6);
+    this.loadPlatform(16);
   }
 
   loadPlatform(n) {
