@@ -3,6 +3,7 @@ class Platform {
   constructor(x, y) {
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0,0);
+    this.arr = [1: rect()]
 
   }
 
@@ -18,6 +19,7 @@ class Platform {
   }
 //++++++++++++++++++++++++++++++++++++++++++++Color and Location
   render() {
+
     fill(0, 100, 240);
     rect(50, 150, 40, 10);
 
