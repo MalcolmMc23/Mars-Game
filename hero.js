@@ -5,9 +5,10 @@ class Hero {
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0, 0);
     this.pLevel;
-    this.hCount = 0;
-    this.fCount = 0;
-    this.jumpcount = 0;
+    this.hCount = 0; //image number
+    this.fCount = 0; //frame counter
+    this.jumpcount = 0; //jump counter
+    this.heroImg = heroImg;
   }
 
   run() {
@@ -16,13 +17,18 @@ class Hero {
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
+    // fill(225, 20, 100);
+    // ellipse(this.loc.x, this.loc.y, 15, 15);
+
     this.fCount++;
-    fill(225, 20, 100);
-    ellipse(this.loc.x, this.loc.y, 15, 15);
-    image(heroImg[this.hCount], this.loc.x - 13, this.loc.y - 20);
-    if (++this.hCount >= 5) {
-      this.hCount = 0;
+    for (let i = 0; i < this.heroImg.length; i++) {
+      image(
+        heroImg[this.hCount],
+        this.loc.x - 15,
+        this.loc.y - this.heroImg[i].height
+      );
     }
+    //adds one hero image every 10 frame
     if (this.isColliding()) {
       if (this.fCount >= 10) {
         if (++this.hCount >= 5) {
@@ -49,10 +55,11 @@ class Hero {
   isColliding() {
     for (let i = 0; i < 20; i++) {
       if (
-        this.loc.y + 7.6 > rGame.platform[i].loc.y &&
-        this.loc.y + 7.6 < rGame.platform[i].loc.y + 10 &&
-        this.loc.x + 7.6 > rGame.platform[i].loc.x &&
-        this.loc.x + 7.6 < rGame.platform[i].loc.x + 40
+        this.vel.y > 0 &&
+        this.loc.y > rGame.platform[i].loc.y &&
+        this.loc.y < rGame.platform[i].loc.y + 10 &&
+        this.loc.x > rGame.platform[i].loc.x &&
+        this.loc.x < rGame.platform[i].loc.x + 40
       ) {
         this.pLevel = rGame.platform[i].loc.y;
         return true;

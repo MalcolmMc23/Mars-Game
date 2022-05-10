@@ -22,23 +22,25 @@ class Game {
   }
 
   loadPlatform(n) {
-    // this.platforms.push(new Platform(x, y, r, o, f, e))
-    this.platform.push(new Platform(50, 150, 0, 0, 0, 0));
-    this.platform.push(new Platform(100, 200, 0, 0, 0, 0));
-    this.platform.push(new Platform(150, 250, 0, 0, 0, 0));
-    this.platform.push(new Platform(200, 300, 0, 0, 0, 0));
-    this.platform.push(new Platform(250, 350, 0, 0, 0, 0));
-    this.platform.push(new Platform(300, 400, 0, 0, 0, 0));
-    this.platform.push(new Platform(350, 450, 0, 0, 0, 0));
-    this.platform.push(new Platform(400, 500, 0, 0, 0, 0));
-    this.platform.push(new Platform(450, 150, 0, 0, 0, 0));
-    this.platform.push(new Platform(500, 200, 0, 0, 0, 0));
-    this.platform.push(new Platform(550, 250, 0, 0, 0, 0));
-    this.platform.push(new Platform(600, 300, 0, 0, 0, 0));
-    this.platform.push(new Platform(650, 350, 0, 0, 0, 0));
-    this.platform.push(new Platform(700, 400, 0, 0, 0, 0));
-    this.platform.push(new Platform(750, 450, 0, 0, 0, 0));
-    this.platform.push(new Platform(800, 500, 0, 0, 0, 0));
+    for (let i = 0; i < n; i++) {
+      // this.platforms.push(new Platform(x, y, r, o, f, e))
+      this.platform[0] = new Platform(50, 150, 0, 0, 0, 0);
+      this.platform.push(new Platform(100, 200, 0, 0, 0, 0));
+      this.platform.push(new Platform(150, 250, 0, 0, 0, 0));
+      this.platform.push(new Platform(200, 300, 0, 0, 0, 0));
+      this.platform.push(new Platform(250, 350, 0, 0, 0, 0));
+      this.platform.push(new Platform(300, 400, 0, 0, 0, 0));
+      this.platform.push(new Platform(350, 450, 0, 0, 0, 0));
+      this.platform.push(new Platform(400, 500, 0, 0, 0, 0));
+      this.platform.push(new Platform(450, 150, 0, 0, 0, 0));
+      this.platform.push(new Platform(500, 200, 0, 0, 0, 0));
+      this.platform.push(new Platform(550, 250, 0, 0, 0, 0));
+      this.platform.push(new Platform(600, 300, 0, 0, 0, 0));
+      this.platform.push(new Platform(650, 350, 0, 0, 0, 0));
+      this.platform.push(new Platform(700, 400, 0, 0, 0, 0));
+      this.platform.push(new Platform(750, 450, 0, 0, 0, 0));
+      this.platform.push(new Platform(800, 500, 0, 0, 0, 0));
+    }
   }
 
   run() {
@@ -76,9 +78,9 @@ class Game {
 
   lvl1() {
     this.bg.run();
+    this.hero.run();
     for (let i = 0; i < this.platform.length; i++) {
       this.platform[i].run();
     }
-    this.hero.run();
   }
 }
