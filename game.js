@@ -33,7 +33,7 @@ class Game {
       this.platform.push(new Platform(350, 450, 0, 0, 0, 0));
       this.platform.push(new Platform(400, 500, 0, 0, 0, 0));
       this.platform.push(new Platform(450, 150, 0, 0, 0, 0));
-      this.platform.push(new Platform(500, 200, 0, 0, 0, 0));
+      this.platform.push(new Platform(500, 200, 0, 0, 0, 1));
       this.platform.push(new Platform(550, 250, 0, 0, 0, 0));
       this.platform.push(new Platform(600, 300, 0, 0, 0, 0));
       this.platform.push(new Platform(650, 350, 0, 0, 0, 0));
