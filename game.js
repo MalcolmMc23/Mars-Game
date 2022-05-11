@@ -8,6 +8,11 @@ class Game {
     this.hero;
     this.heroImg = heroImg;
     this.platform = [];
+    this.trap = t;
+    this.enemy = e;
+    this.rock = r;
+    this.oxygen = o;
+    this.fuel = f;
     //this.platform;
 
     this.initGame();
