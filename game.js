@@ -8,11 +8,11 @@ class Game {
     this.hero;
     this.heroImg = heroImg;
     this.platform = [];
-    this.trap = t;
-    this.enemy = e;
-    this.rock = r;
-    this.oxygen = o;
-    this.fuel = f;
+  //  this.trap = t;
+    //this.enemy = e;
+    //this.rock = r;
+    //this.oxygen = o;
+    //this.fuel = f;
     //this.platform;
 
     this.initGame();
@@ -30,7 +30,7 @@ class Game {
     for (let i = 0; i < n; i++) {
       // this.platforms.push(new Platform(x, y, r, o, t, f, e))
       this.platform[0] = new Platform(50, 150, 0, 0, 0, 0, 0);
-      this.platform.push(new Platform(100, 200, 0, 0, 0, 0, 0));
+      this.platform.push(new Platform(75, 200, 0, 0, 0, 0, 0));
       this.platform.push(new Platform(150, 250, 0, 0, 0, 0, 0));
       this.platform.push(new Platform(200, 300, 0, 0, 0, 0, 0));
       this.platform.push(new Platform(250, 350, 0, 0, 0, 0, 0));

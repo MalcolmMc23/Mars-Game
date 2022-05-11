@@ -59,7 +59,7 @@ class Hero {
         this.loc.y > rGame.platform[i].loc.y &&
         this.loc.y < rGame.platform[i].loc.y + 10 &&
         this.loc.x > rGame.platform[i].loc.x &&
-        this.loc.x < rGame.platform[i].loc.x + 40
+        this.loc.x < rGame.platform[i].loc.x + 60
       ) {
         this.pLevel = rGame.platform[i].loc.y;
         return true;
