@@ -17,7 +17,7 @@ function preload() {
     heroImg[i] = loadImage("hero/h" + i + ".png");
   }
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 4; i++) {
     bgImg[i] = loadImage("background/b" + i + ".png");
   }
 }

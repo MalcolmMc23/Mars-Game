@@ -25,7 +25,6 @@ class Bg {
     this.vel2 = createVector(5, 0);
     this.vel3 = createVector(7, 0);
     this.vel4 = createVector(9, 0);
-    this.vel5 = createVector(10, 0);
   }
 
   run() {
@@ -51,9 +50,6 @@ class Bg {
       image(this.bgImg[3], this.loc11.x, height - this.bgImg[3].height);
       image(this.bgImg[3], this.loc12.x, height - this.bgImg[3].height);
 
-      image(this.bgImg[4], this.loc13.x, height - this.bgImg[4].height);
-      image(this.bgImg[4], this.loc14.x, height - this.bgImg[4].height);
-      image(this.bgImg[4], this.loc15.x, height - this.bgImg[4].height);
     }
   }
 
