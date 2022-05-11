@@ -29,4 +29,8 @@ class Platform {
       this.loc.x = this.loc.x + 10;
     }
   }
+
+  trap() {
+    //TODO ### add a trap that deleats the patform when the hero steps on it.
+  }
 }
