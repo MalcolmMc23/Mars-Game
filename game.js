@@ -31,7 +31,7 @@ class Game {
       // this.platforms.push(new Platform(x, y, r, o, t, f, e))
       this.platform[0] = new Platform(50, 150, 0, 0, 0, 0, 0);
       this.platform.push(new Platform(75, 200, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(150, 250, 0, 0, this.trap, 0, 0));
+      this.platform.push(new Platform(150, 250, 0, 0, true, 0, 0));
       this.platform.push(new Platform(200, 300, 0, 0, 0, 0, 0));
       this.platform.push(new Platform(250, 350, 0, 0, 0, 0, 0));
       this.platform.push(new Platform(300, 400, 0, 0, 0, 0, 0));
@@ -84,7 +84,6 @@ class Game {
   lvl1() {
     this.bg.run();
     this.hero.run();
-    // this.trap.run();
     for (let i = 0; i < this.platform.length; i++) {
       this.platform[i].run();
     }

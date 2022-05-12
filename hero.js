@@ -49,6 +49,9 @@ class Hero {
       this.vel.add(this.acc);
       this.vel.limit(10);
     }
+    if (this.isTrapped()) {
+      gameState = 3;
+    }
   }
 
   //++++++++++++++++++++++++++++++When the hero hits the platform from above or below
@@ -67,6 +70,17 @@ class Hero {
     }
 
     return false;
+  }
+
+  isTrapped() {
+    if (
+      this.loc.y > rGame.trap.pLoc.y &&
+      this.loc.y < rGame.trap.pLoc.y + rGame.trap.h + 10 &&
+      this.loc.x > rGame.trap.pLoc.x &&
+      this.loc.x < rGame.trap.pLoc.x + rGame.trap.w
+    ) {
+      return true;
+    }
   }
 
   jump() {

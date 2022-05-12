@@ -12,8 +12,8 @@ class Platform {
   run() {
     this.update();
     this.render();
-    this.move();
     this.runTrap();
+    this.move();
   }
 
   update() {
@@ -35,7 +35,9 @@ class Platform {
   }
 
   runTrap() {
-    rGame.trap.run();
+    if (this.trap == true) {
+      rGame.trap.run(this.loc.x, this.loc.y);
+    }
     //TODO ### add a trap that deleats the patform when the hero steps on it.
   }
 }
