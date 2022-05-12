@@ -38,18 +38,17 @@ class Bg {
       image(this.bgImg[0], this.loc2.x, 0);
       image(this.bgImg[0], this.loc3.x, 0);
 
-      image(this.bgImg[1], this.loc4.x, height - this.bgImg[1].height);
-      image(this.bgImg[1], this.loc5.x, height - this.bgImg[1].height);
-      image(this.bgImg[1], this.loc6.x, height - this.bgImg[1].height);
+      image(this.bgImg[1], this.loc4.x, 170);
+      image(this.bgImg[1], this.loc5.x, 170);
+      image(this.bgImg[1], this.loc6.x, 170);
 
-      image(this.bgImg[2], this.loc7.x, height - this.bgImg[2].height);
-      image(this.bgImg[2], this.loc8.x, height - this.bgImg[2].height);
-      image(this.bgImg[2], this.loc9.x, height - this.bgImg[2].height);
+      image(this.bgImg[2], this.loc7.x, 300);
+      image(this.bgImg[2], this.loc8.x, 300);
+      image(this.bgImg[2], this.loc9.x, 300);
 
       image(this.bgImg[3], this.loc10.x, height - this.bgImg[3].height);
       image(this.bgImg[3], this.loc11.x, height - this.bgImg[3].height);
       image(this.bgImg[3], this.loc12.x, height - this.bgImg[3].height);
-
     }
   }
 
