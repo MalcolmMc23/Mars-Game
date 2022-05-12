@@ -60,9 +60,16 @@ function startGame(){
   fill(0);
   text("Instructions", 150, 485);
   text("Play", 600, 485);
+
+  fill(255,165,0);
+  text("Artists: Keana, Isaiah, and Lucas", 50, 150)
+
+  fill(255,165,0);
+  text("Coders: Malcolm McDoanld and Shane Frey", 50, 100)
+
   fill(191,128,255)
-  textSize(200)
-  text("Mars Game", 130, 650)
+  textSize(150)
+  text("Mars Game", 50, 350);
 }
 
 function playGame() {
