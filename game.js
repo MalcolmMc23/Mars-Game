@@ -8,8 +8,7 @@ class Game {
     this.hero;
     this.heroImg = heroImg;
     this.platform = [];
-    this.trap = new Trap;
-  //  this.trap = t;
+    this.trap = new Trap();
     //this.enemy = e;
     //this.rock = r;
     //this.oxygen = o;
@@ -85,7 +84,7 @@ class Game {
   lvl1() {
     this.bg.run();
     this.hero.run();
-    this.trap.run();
+    // this.trap.run();
     for (let i = 0; i < this.platform.length; i++) {
       this.platform[i].run();
     }

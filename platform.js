@@ -1,17 +1,19 @@
 //Mars Game
 class Platform {
-  constructor(x, y, r, o, f, e) {
+  constructor(x, y, r, o, t, f, e) {
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0, 0);
     this.loc = createVector(x, y);
-    this.h = 10
-    this.w = 60
+    this.h = 10;
+    this.w = 60;
+    this.trap = t;
   }
 
   run() {
     this.update();
     this.render();
     this.move();
+    this.runTrap();
   }
 
   update() {
@@ -32,7 +34,8 @@ class Platform {
     }
   }
 
-  trap() {
+  runTrap() {
+    rGame.trap.run();
     //TODO ### add a trap that deleats the patform when the hero steps on it.
   }
 }

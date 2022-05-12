@@ -1,6 +1,6 @@
 class Trap {
-  constructor(x, y) {
-    this.loc = createVector(x, y)
+  constructor() {
+    this.loc = createVector(0, 0);
   }
 
   run() {
@@ -9,12 +9,14 @@ class Trap {
   }
 
   render() {
-    fill(255,0,0);
-    triangle(x1, y1, x2, y2, x3, y3)
+    fill(255, 0, 0);
+    rect(100, 100, 50, 20);
+
+    // console.log("i am here");
   }
   update() {
-    if(this.hero.loc === this.loc){
-      gameState === 3;
-    }
+    // if (this.hero.loc === this.loc) {
+    //   gameState === 3;
+    // }
   }
 }
