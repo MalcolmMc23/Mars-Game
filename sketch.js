@@ -100,3 +100,45 @@ function keyPressed() {
   }
 }
 }
+
+function mouseMoved() {
+
+  if(buttPlay.mouseOverButton()) {
+    buttPlay.clr = color(191,128,255);
+  } else {
+    buttPlay.clr = color(230,191,0);
+  }
+  if(back.mouseOverButton()) {
+    back.clr = color(191,128,255);
+  } else {
+    back.clr = color(230,191,0);
+  }
+
+  if(playInst.mouseOverButton()){
+    playInst.clr = color(191,128,255);
+  } else {
+    playInst.clr = color(230,191,0);
+  }
+  if(buttAgain.mouseOverButton()){
+    buttAgain.clr = color(191,128,255);
+  } else {
+    buttAgain.clr = color(230,191,0);
+  }
+}
+
+function mousePressed() {
+  if(buttPlay.mouseOverButton()) {
+    gameState = 2;
+  }
+
+  if(playInst.mouseOverButton()){
+    gameState = 4;
+    console.log("show Instructions");
+  }
+  if(back.mouseOverButton()) {
+    gameState = 1;
+  }
+  if((buttAgain).mouseOverButton()) {
+    gameState = 1;
+  }
+}
