@@ -7,12 +7,14 @@ class Platform {
     this.h = 10;
     this.w = 60;
     this.trap = t;
+    this.rock = r;
   }
 
   run() {
     this.update();
     this.render();
     this.runTrap();
+    this.runRock();
     this.move();
   }
 
@@ -35,9 +37,15 @@ class Platform {
   }
 
   runTrap() {
-    if (this.trap == true) {
+    if (this.trap === true) {
       rGame.trap.run(this.loc.x, this.loc.y);
     }
-    //TODO ### add a trap that deleats the patform when the hero steps on it.
+    //TODO ### add a trap image
+  }
+
+  runRock() {
+    if (this.rock === true) {
+      rGame.rock.run(this.loc.x, this.loc.y);
+    }
   }
 }
