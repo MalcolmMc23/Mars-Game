@@ -2,6 +2,7 @@ class Game {
   constructor(heroImg, bgImg) {
     this.gameState = 1;
     this.lvl = 1;
+    this.rScore = 0;
 
     this.bg;
     this.bgImg = bgImg;
@@ -37,7 +38,7 @@ class Game {
       this.platform.push(new Platform(300, 400, 0, 0, 0, 0, 0));
       this.platform.push(new Platform(350, 450, 0, 0, 0, 0, 0));
       this.platform.push(new Platform(400, 500, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(450, 150, 0, 0, 0, 0, 0));
+      this.platform.push(new Platform(450, 150, true, 0, 0, 0, 0));
       this.platform.push(new Platform(500, 200, 0, 0, 0, 1, 0));
       this.platform.push(new Platform(550, 250, 0, 0, 0, 0, 0));
       this.platform.push(new Platform(600, 300, 0, 0, 0, 0, 0));
@@ -87,5 +88,7 @@ class Game {
     for (let i = 0; i < this.platform.length; i++) {
       this.platform[i].run();
     }
+    textSize(12);
+    text("you have " + this.rScore + " out of # rocks", 50, 50);
   }
 }
