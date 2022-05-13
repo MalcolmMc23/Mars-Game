@@ -30,7 +30,7 @@ class Hero {
     }
     //adds one hero image every 10 frame
     if (this.isColliding()) {
-      if (this.fCount >= 10) {
+      if (this.fCount >= 4) {
         if (++this.hCount >= 5) {
           this.hCount = 0;
         }
