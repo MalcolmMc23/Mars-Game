@@ -59,7 +59,7 @@ function startGame(){
   buttPlay.run();
   fill(0);
   text("Instructions", 150, 485);
-  text("Play", 600, 485);
+  text("Play", 700, 485);
 
   fill(255,165,0);
   text("Artists: Keana, Isaiah, and Lucas", 50, 150)
