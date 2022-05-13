@@ -60,7 +60,7 @@ class Hero {
 
   //++++++++++++++++++++++++++++++When the hero hits the platform from above or below
   isColliding() {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < rGame.platform.length; i++) {
       if (
         this.vel.y > 0 &&
         this.loc.y + this.heroH > rGame.platform[i].loc.y &&

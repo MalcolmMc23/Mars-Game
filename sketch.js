@@ -7,6 +7,7 @@
 let rGame;
 const heroImg = [];
 const bgImg = [];
+let platImg;
 let buttPlay;
 let playInst;
 let buttAgain;
@@ -24,12 +25,13 @@ function preload() {
   for (let i = 0; i < 4; i++) {
     bgImg[i] = loadImage("background/b" + i + ".png");
   }
+  platImg = loadImage("platform/p0.png");
 }
 
 function setup() {
   var cnv = createCanvas(900, 600);
   cnv.position((windowWidth - width) / 2, 10);
-  rGame = new Game(heroImg, bgImg);
+  rGame = new Game(heroImg, bgImg, platImg);
   frameRate(30);
   gameState = 1;
 

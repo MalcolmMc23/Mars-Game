@@ -21,9 +21,9 @@ class Rock {
 
   update() {
     if (this.isGrabbing()) {
-      this.done = true;
       rGame.rScore++;
       console.log("we got one");
+      this.done = true;
     }
   }
 
