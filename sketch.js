@@ -80,11 +80,10 @@ function playGame() {
 }
 
 function endGame() {
+  background(0, 0, 0);
   buttAgain.run();
   console.log("helloworld");
-  fill(230,191,0);
   text("Play Again", 300, 300);
-  background(0, 0, 0);
 }
 
 function intGame(){
