@@ -35,7 +35,7 @@ function setup() {
 
   buttPlay = new Button("Play", width - 250, 450, 150, 50, 180);
   playInst = new Button("Instructions", 150, 450, 150, 50, 180 );
-  buttAgain = new Button("Play Again", width, 350, 300, 150, 50, 180);
+  buttAgain = new Button("Play Again", 100, 100, 300, 300, 150, 50, 180);
   back = new Button("Back", 500, 500, 100, 50, 180)
 }
 
@@ -81,8 +81,9 @@ function playGame() {
 
 function endGame() {
   buttAgain.run();
+  console.log("helloworld");
   fill(230,191,0);
-  text("Play Again", 400, 600);
+  text("Play Again", 300, 300);
   background(0, 0, 0);
 }
 
@@ -102,13 +103,14 @@ function intGame(){
   textSize(25);
   text("WATCH OUT FOR TRAPS AND ENEMIES", 100, 400)
 
+}
+
 function keyPressed() {
   if (keyIsDown(UP_ARROW)) {
     if (rGame.hero.jumpcount < 2) {
       rGame.hero.jump();
     }
   }
-}
 }
 
 function mouseMoved() {
