@@ -35,7 +35,7 @@ function setup() {
 
   buttPlay = new Button("Play", width - 250, 450, 150, 50, 180);
   playInst = new Button("Instructions", 150, 450, 150, 50, 180 );
-  buttAgain = new Button("Play Again", 100, 100, 300, 300, 150, 50, 180);
+  buttAgain = new Button("Play Again", 400, 150, 200, 300, 450, 50, 200);
   back = new Button("Back", 500, 500, 100, 50, 180)
 }
 
@@ -83,7 +83,9 @@ function endGame() {
   background(0, 0, 0);
   buttAgain.run();
   console.log("helloworld");
-  text("Play Again", 300, 300);
+
+  fill(0)
+  text("Play Again", 450, 300);
 }
 
 function intGame(){
