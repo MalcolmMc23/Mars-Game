@@ -17,8 +17,8 @@ class Hero {
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
-     fill(225, 20, 100);
-     ellipse(this.loc.x, this.loc.y, 15, 15);
+    fill(225, 20, 100);
+    ellipse(this.loc.x, this.loc.y, 15, 15);
 
     this.fCount++;
     for (let i = 0; i < this.heroImg.length; i++) {
@@ -30,11 +30,13 @@ class Hero {
     }
     //adds one hero image every 10 frame
     if (this.isColliding()) {
-      if (this.fCount >= 4) {
-        if (++this.hCount >= 5) {
-          this.hCount = 0;
+      if (keyIsDown(RIGHT_ARROW) || keyIsDown(LEFT_ARROW)) {
+        if (this.fCount >= 2) {
+          if (++this.hCount >= 5) {
+            this.hCount = 0;
+          }
+          this.fCount = 0;
         }
-        this.fCount = 0;
       }
     }
   }
