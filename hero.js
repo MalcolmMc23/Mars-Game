@@ -17,8 +17,8 @@ class Hero {
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
-    // fill(225, 20, 100);
-    // ellipse(this.loc.x, this.loc.y, 15, 15);
+     fill(225, 20, 100);
+     ellipse(this.loc.x, this.loc.y, 15, 15);
 
     this.fCount++;
     for (let i = 0; i < this.heroImg.length; i++) {
