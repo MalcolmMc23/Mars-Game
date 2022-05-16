@@ -6,10 +6,13 @@ class Platform {
     this.loc = createVector(x, y);
     this.h = 10;
     this.w = 60;
-    this.trap = t;
     this.makeRock = r;
+    this.makeTrap = t;
     if (r) {
       this.rock = new Rock();
+    }
+    if (t) {
+      this.trap = new Trap();
     }
   }
 
@@ -42,8 +45,8 @@ class Platform {
   }
 
   runTrap() {
-    if (this.trap === true) {
-      rGame.trap.run(this.loc.x, this.loc.y);
+    if (this.makeTrap === true) {
+      this.trap.run(this.loc.x, this.loc.y);
     }
     //TODO ### add a trap image
   }
