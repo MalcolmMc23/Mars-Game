@@ -7,7 +7,9 @@ class Platform {
     this.h = 10;
     this.w = 60;
     this.trap = t;
-    this.rock = r;
+    if(r){
+      this.rock = new Rock();
+    }
   }
 
   run() {
