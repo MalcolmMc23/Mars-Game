@@ -7,7 +7,8 @@ class Platform {
     this.h = 10;
     this.w = 60;
     this.trap = t;
-    if(r){
+    this.makeRock = r;
+    if (r) {
       this.rock = new Rock();
     }
   }
@@ -48,8 +49,8 @@ class Platform {
   }
 
   runRock() {
-    if (this.rock === true) {
-      rGame.rock.run(this.loc.x, this.loc.y);
+    if (this.makeRock === true) {
+      this.rock.run(this.loc.x, this.loc.y);
     }
   }
 }
