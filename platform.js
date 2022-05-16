@@ -8,11 +8,15 @@ class Platform {
     this.w = 60;
     this.makeRock = r;
     this.makeTrap = t;
+    this.makeFuel = f;
     if (r) {
       this.rock = new Rock();
     }
     if (t) {
       this.trap = new Trap();
+    }
+    if (f) {
+      this.fuel = new Fuel();
     }
   }
 
@@ -21,6 +25,7 @@ class Platform {
     this.render();
     this.runTrap();
     this.runRock();
+    this.runFuel();
     this.move();
   }
 
@@ -54,6 +59,12 @@ class Platform {
   runRock() {
     if (this.makeRock === true) {
       this.rock.run(this.loc.x, this.loc.y);
+    }
+  }
+
+  runFuel() {
+    if (this.makeFuel === true) {
+      this.fuel.run(this.loc.x, this.loc.y);
     }
   }
 }

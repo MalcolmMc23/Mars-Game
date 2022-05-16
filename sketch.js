@@ -108,7 +108,13 @@ function intGame() {
 
 function keyPressed() {
   if (keyIsDown(UP_ARROW)) {
-    if (rGame.hero.jumpcount < 2) {
+    //maybe add a new function for fuel so you jump higher
+    if (rGame.hero.fuelCount >= 1 && rGame.hero.jumpCount == 1) {
+      rGame.hero.fuelCount--;
+      rGame.hero.jump();
+    }
+    if (rGame.hero.jumpCount < 1) {
+      rGame.hero.jumpCount++;
       rGame.hero.jump();
     }
   }

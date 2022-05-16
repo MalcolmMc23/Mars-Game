@@ -7,7 +7,10 @@ class Hero {
     this.pLevel;
     this.hCount = 0; //image number
     this.fCount = 0; //frame counter
-    this.jumpcount = 0; //jump counter
+    this.jumpCount = 0; //jump counter
+
+    this.fuelCount = 1;
+
     this.heroImg = heroImg;
     for (let i = 0; i < this.heroImg.length; i++) {
       this.heroW = this.heroImg[i].width;
@@ -17,6 +20,7 @@ class Hero {
   run() {
     this.update();
     this.render();
+    this.showFuel();
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
@@ -50,7 +54,7 @@ class Hero {
     if (this.isColliding()) {
       this.vel.y = 0;
       // this.loc.y = this.pLevel - 10;
-      this.jumpcount = 0;
+      this.jumpCount = 0;
     } else if (this.isColliding() === false) {
       this.loc.add(this.vel);
       this.vel.add(this.acc);
@@ -68,7 +72,6 @@ class Hero {
         this.loc.x + this.heroW > rGame.platform[i].loc.x &&
         this.loc.x < rGame.platform[i].loc.x + 60
       ) {
-        this.pLevel = rGame.platform[i].loc.y;
         return true;
       }
     }
@@ -79,6 +82,13 @@ class Hero {
   jump() {
     this.vel.y = -4;
     this.acc.y = 0.1;
-    this.jumpcount++;
+  }
+  //this will show how much fuel you have
+  showFuel() {
+    fill(0, 0, 255);
+    rect(width - 100, 50, 60, 40);
+    fill(10);
+    textSize(25);
+    text(this.fuelCount, width - 75, 80);
   }
 }

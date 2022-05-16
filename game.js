@@ -28,23 +28,61 @@ class Game {
 
   loadPlatform(n) {
     for (let i = 0; i < 1; i++) {
-      // this.platforms.push(new Platform(x, y, r, o, t, f, e))
-      this.platform[0] = new Platform(50, 150, true, 0, 0, 0, 0);
-      this.platform.push(new Platform(75, 200, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(150, 250, 0, 0, true, 0, 0));
-      this.platform.push(new Platform(200, 300, 0, 0, true, 0, 0));
-      this.platform.push(new Platform(250, 350, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(300, 400, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(350, 450, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(400, 500, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(450, 150, true, 0, 0, 0, 0));
-      this.platform.push(new Platform(500, 200, 0, 0, 0, 1, 0));
-      this.platform.push(new Platform(550, 250, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(600, 300, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(650, 350, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(700, 400, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(750, 450, 0, 0, 0, 0, 0));
-      this.platform.push(new Platform(800, 500, 0, 0, 0, 0, 0));
+      //this.platforms.push(new Platform(x, y,   r,    o,     t,     f,     e))
+      this.platform[0] = new Platform(
+        50,
+        150,
+        true,
+        false,
+        false,
+        false,
+        false
+      );
+      this.platform.push(
+        new Platform(75, 200, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(150, 250, false, false, true, false, false)
+      );
+      this.platform.push(
+        new Platform(200, 300, false, false, true, false, false)
+      );
+      this.platform.push(
+        new Platform(250, 350, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(300, 400, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(350, 450, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(400, 500, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(450, 150, true, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(500, 200, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(550, 250, false, false, false, true, false)
+      );
+      this.platform.push(
+        new Platform(600, 300, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(650, 350, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(700, 400, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(750, 450, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(800, 500, false, false, false, false, false)
+      );
     }
   }
 
