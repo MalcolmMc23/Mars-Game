@@ -157,7 +157,8 @@ function mousePressed() {
   if (back.mouseOverButton()) {
     gameState = 1;
   }
-  if (buttAgain.mouseOverButton()) {
-    window.location.reload();
-  }
+  if (gameState === 3)
+    if (buttAgain.mouseOverButton()) {
+      window.location.reload();
+    }
 }

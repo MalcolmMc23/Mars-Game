@@ -4,12 +4,11 @@ class Hero {
     this.loc = createVector(100, 100);
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0, 0);
-    this.pLevel;
     this.hCount = 0; //image number
     this.fCount = 0; //frame counter
     this.jumpCount = 0; //jump counter
 
-    this.fuelCount = 1;
+    this.fuelCount = 1; // fuel counter
 
     this.heroImg = heroImg;
     for (let i = 0; i < this.heroImg.length; i++) {
@@ -53,13 +52,20 @@ class Hero {
   update() {
     if (this.isColliding()) {
       this.vel.y = 0;
-      // this.loc.y = this.pLevel - 10;
       this.jumpCount = 0;
     } else if (this.isColliding() === false) {
       this.loc.add(this.vel);
       this.vel.add(this.acc);
       this.vel.limit(10);
     }
+  }
+  //this will show how much fuel you have
+  showFuel() {
+    fill(0, 0, 255);
+    rect(width - 100, 50, 60, 40);
+    fill(10);
+    textSize(25);
+    text(this.fuelCount, width - 75, 80);
   }
 
   //++++++++++++++++++++++++++++++When the hero hits the platform from above or below
@@ -78,17 +84,9 @@ class Hero {
 
     return false;
   }
-
+  //jump callback
   jump() {
     this.vel.y = -4;
     this.acc.y = 0.1;
-  }
-  //this will show how much fuel you have
-  showFuel() {
-    fill(0, 0, 255);
-    rect(width - 100, 50, 60, 40);
-    fill(10);
-    textSize(25);
-    text(this.fuelCount, width - 75, 80);
   }
 }
