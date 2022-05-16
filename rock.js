@@ -2,7 +2,7 @@ class Rock {
   constructor(x, y) {
     this.w = 10;
     this.h = 10;
-    this.done = false;
+    this.done = false;// if rock is collectes, done = true
     this.rockCound = 5;
   }
   run(x, y) {
@@ -23,12 +23,12 @@ class Rock {
   update() {
     if (this.isGrabbing()) {
       rGame.rScore++;
-      console.log("we got one");
+     // console.log("we got one");
       this.done = true;
     }
   }
 
-  isGrabbing() {
+  isGrabbing() {//  test for collision between player and rock
     if (this.done === false) {
       if (
         rGame.hero.loc.y + rGame.hero.heroH > this.loc.y &&
@@ -39,5 +39,7 @@ class Rock {
         return true;
       }
     }
+    return false;
   }
-}
+
+}//******************************************************* class */

@@ -9,7 +9,6 @@ class Game {
     this.hero;
     this.heroImg = heroImg;
     this.platform = [];
-    this.rock = new Rock();
     this.trap = new Trap();
     //this.enemy = e;
     //this.oxygen = o;
