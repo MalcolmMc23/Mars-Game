@@ -65,13 +65,13 @@ function startGame() {
 
   text("Play", 700, 485);
 
-  fill(255, 165, 0);
+  fill(244, 63, 25);
   text("Artists: Keana, Isaiah, and Lucas", 50, 150);
 
-  fill(255, 165, 0);
+  fill(244, 63, 25);
   text("Coders: Malcolm McDoanld and Shane Frey", 50, 100);
 
-  fill(191, 128, 255);
+  fill(244, 63, 25);
   textSize(150);
   text("Mars Game", 50, 350);
 }
@@ -95,9 +95,9 @@ function intGame() {
   fill(0);
   textSize(25);
   text("BACK", 510, 540);
-  fill(230, 191, 0);
+  fill(244, 63, 25);
   rect(95, 150, 600, 60);
-  fill(230, 191, 0);
+  fill(244, 63, 25);
   rect(95, 350, 575, 100);
   fill(0);
   textSize(20);
@@ -116,25 +116,25 @@ function keyPressed() {
 
 function mouseMoved() {
   if (buttPlay.mouseOverButton()) {
-    buttPlay.clr = color(191, 128, 255);
+    buttPlay.clr = color(25, 175, 244);
   } else {
-    buttPlay.clr = color(230, 191, 0);
+    buttPlay.clr = color(244, 63, 25);
   }
   if (back.mouseOverButton()) {
-    back.clr = color(191, 128, 255);
+    back.clr = color(25, 175, 244);
   } else {
-    back.clr = color(230, 191, 0);
+    back.clr = color(244, 63, 25);
   }
 
   if (playInst.mouseOverButton()) {
-    playInst.clr = color(191, 128, 255);
+    playInst.clr = color(25, 175, 244);
   } else {
-    playInst.clr = color(230, 191, 0);
+    playInst.clr = color(244, 63, 25);
   }
   if (buttAgain.mouseOverButton()) {
-    buttAgain.clr = color(191, 128, 255);
+    buttAgain.clr = color(25, 175, 244);
   } else {
-    buttAgain.clr = color(230, 191, 0);
+    buttAgain.clr = color(244, 63, 25);
   }
 }
 
