@@ -3,6 +3,7 @@ class Rock {
     this.w = 10;
     this.h = 10;
     this.done = false;
+    this.rockCound = 5;
   }
   run(x, y) {
     this.pLoc = createVector(x, y);
