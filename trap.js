@@ -16,20 +16,30 @@ class Trap {
     rect(this.loc.x, this.loc.y, this.w, this.h);
   }
   update() {
-    if (this.isHitting()) {
-      gameState = 3;
+    // if (this.isHitting()) {
+    //   gameState = 3;
+    // }
+    if (this.islanding()) {
+      this.pLoc.y = this.pLoc.y + 1;
     }
   }
 
-  isHitting() {
-    // if the hero is hitting the trap it returns true
-    if (
-      rGame.hero.loc.y + rGame.hero.heroH > this.loc.y &&
-      rGame.hero.loc.y < this.loc.y + this.h + 10 &&
-      rGame.hero.loc.x + rGame.hero.heroH > this.loc.x &&
-      rGame.hero.loc.x < this.loc.x + this.w
-    ) {
-      return true;
-    }
+  islanding() {
+    rGame.hero.loc.y + rGame.hero.heroH > this.pLoc.y &&
+      rGame.hero.loc.y < this.pLoc.y + 10 &&
+      rGame.hero.loc.x + rGame.hero.heroW > this.pLoc.x &&
+      rGame.hero.loc.x < this.pLoc.x + 60;
   }
+
+  // isHitting() {
+  //   // if the hero is hitting the trap it returns true
+  //   if (
+  //     rGame.hero.loc.y + rGame.hero.heroH > this.loc.y &&
+  //     rGame.hero.loc.y < this.loc.y + this.h + 10 &&
+  //     rGame.hero.loc.x + rGame.hero.heroH > this.loc.x &&
+  //     rGame.hero.loc.x < this.loc.x + this.w
+  //   ) {
+  //     return true;
+  //   }
+  // }
 }
