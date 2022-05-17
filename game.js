@@ -23,7 +23,6 @@ class Game {
     this.hero = new Hero(this.heroImg);
     //this.platform = new Platform();
     this.loadPlatform(16);
-    console.log(this.platform);
   }
 
   loadPlatform(n) {
@@ -121,11 +120,14 @@ class Game {
 
   lvl1() {
     this.bg.run();
-    this.hero.run();
     for (let i = 0; i < this.platform.length; i++) {
       this.platform[i].run();
     }
-    textSize(12);
+    this.hero.run();
+
+    fill(10);
+    textSize(20);
     text("you have " + this.rScore + " out of # rocks", 50, 50);
   }
 }
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ class

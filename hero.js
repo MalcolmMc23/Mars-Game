@@ -10,12 +10,12 @@ class Hero {
 
     this.fuelCount = 1; // fuel counter
 
-    this.oxFCount = 0;
-    this.ox = 100;
+    this.oxFCount = 0; // oxygen frame counter
+    this.ox = 100; // oxygen %
 
     this.heroImg = heroImg;
     for (let i = 0; i < this.heroImg.length; i++) {
-      this.heroW = this.heroImg[i].width;
+      this.heroW = this.heroImg[i].width - 25;
       this.heroH = this.heroImg[i].height;
     }
   }
@@ -27,18 +27,18 @@ class Hero {
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
-    for (let i = 0; i < this.heroImg.length; i++) {
-      fill(225, 20, 100);
-      rect(
-        this.loc.x,
-        this.loc.y,
-        this.heroImg[i].width,
-        this.heroImg[i].height
-      );
-    }
+    // for (let i = 0; i < this.heroImg.length; i++) {
+    //   fill(225, 20, 100);
+    //   rect(
+    //     this.loc.x,
+    //     this.loc.y,
+    //     this.heroImg[i].width - 25,
+    //     this.heroImg[i].height
+    //   );
+    // }
     this.fCount++;
     for (let i = 0; i < this.heroImg.length; i++) {
-      image(heroImg[this.hCount], this.loc.x, this.loc.y);
+      image(heroImg[this.hCount], this.loc.x - 20, this.loc.y);
     }
     //adds one hero image every 10 frame
     if (this.isColliding()) {
@@ -57,7 +57,7 @@ class Hero {
     if (this.isColliding()) {
       this.vel.y = 0;
       this.jumpCount = 0;
-    } else if (this.isColliding() === false) {
+    } else {
       this.loc.add(this.vel);
       this.vel.add(this.acc);
       this.vel.limit(10);
@@ -79,7 +79,6 @@ class Hero {
     textSize(20);
     text(this.ox + "%", width - 95, 175);
     this.oxFCount++;
-    console.log(this.ox);
     if (this.oxFCount === 60) {
       this.ox = this.ox - 10;
       this.oxFCount = 0;
@@ -105,9 +104,11 @@ class Hero {
 
     return false;
   }
-  //jump callback
+
+  //++++++++++++++++++++++++++++++ jump callback
   jump() {
     this.vel.y = -4;
     this.acc.y = 0.1;
   }
 }
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ class

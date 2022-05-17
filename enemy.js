@@ -1,17 +1,17 @@
 class Enemy {
   constructor(x, y) {
-    this.w = 20;
-    this.h = 20;
-    this.vel = createVector(-2, 2), (-2, 2);
-    this.acc = createVector(0, 0.01);
-    this.loc = createVector(x, y);
+    this.w = 10;
+    this.h = 10;
+    this.vel = createVector(0, 0);
+    this.acc = createVector(0.5, 0);
   }
 
   run(x, y) {
     this.pLoc = createVector(x, y);
-    this.loc = createVector(this.pLoc.x + 20, this.pLoc.y - 20);
-    this.render();
+    this.loc = createVector(this.pLoc.x + 20, this.pLoc.y - 10);
     this.update();
+    this.render();
+    this.checkEdges();
   }
 
   render() {
@@ -22,10 +22,19 @@ class Enemy {
   update() {
     this.vel.add(this.acc);
     this.loc.add(this.vel);
-
+    this.acc.limit(1);
 
     if (this.isHitting()) {
       gameState = 3;
+    }
+  }
+
+  checkEdges() {
+    if (this.loc.x <= this.pLoc.x) {
+      this.acc.x = -this.acc.x;
+    }
+    if (this.loc.x + this.w >= this.pLoc.x + 60) {
+      this.acc.x = -this.acc.x;
     }
   }
 
@@ -41,3 +50,4 @@ class Enemy {
     }
   }
 }
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ class
