@@ -72,8 +72,8 @@ function startGame() {
   text("Coders: Malcolm McDoanld and Shane Frey", 50, 100);
 
   fill(244, 63, 25);
-  textSize(150);
-  text("Mars Game", 50, 350);
+  textSize(75);
+  text("Exploring the Marineris", 75, 350);
 }
 
 function playGame() {
