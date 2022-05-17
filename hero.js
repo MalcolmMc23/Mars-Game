@@ -10,6 +10,9 @@ class Hero {
 
     this.fuelCount = 1; // fuel counter
 
+    this.oxFCount = 0;
+    this.ox = 100;
+
     this.heroImg = heroImg;
     for (let i = 0; i < this.heroImg.length; i++) {
       this.heroW = this.heroImg[i].width;
@@ -20,6 +23,7 @@ class Hero {
     this.update();
     this.render();
     this.showFuel();
+    this.showOx();
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
@@ -66,6 +70,23 @@ class Hero {
     fill(10);
     textSize(25);
     text(this.fuelCount, width - 75, 80);
+  }
+
+  showOx() {
+    fill(0, 200, 0);
+    rect(width - 100, 150, 60, 40);
+    fill(10);
+    textSize(20);
+    text(this.ox + "%", width - 95, 175);
+    this.oxFCount++;
+    console.log(this.ox);
+    if (this.oxFCount === 60) {
+      this.ox = this.ox - 10;
+      this.oxFCount = 0;
+    }
+    if (this.ox <= 0) {
+      gameState = 3;
+    }
   }
 
   //++++++++++++++++++++++++++++++When the hero hits the platform from above or below

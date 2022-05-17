@@ -7,6 +7,7 @@ class Platform {
     this.h = 10;
     this.w = 60;
     this.makeRock = r;
+    this.makeOxygen = o;
     this.makeTrap = t;
     this.makeFuel = f;
     this.makeEnemy = e;
@@ -22,6 +23,9 @@ class Platform {
     if (e) {
       this.enemy = new Enemy();
     }
+    if (o) {
+      this.oxygen = new Oxygen();
+    }
   }
 
   run() {
@@ -29,6 +33,7 @@ class Platform {
     this.render();
     this.runTrap();
     this.runRock();
+    this.runOxygen();
     this.runFuel();
     this.runEnemy();
     this.move();
@@ -64,6 +69,12 @@ class Platform {
   runRock() {
     if (this.makeRock === true) {
       this.rock.run(this.loc.x, this.loc.y);
+    }
+  }
+
+  runOxygen() {
+    if (this.makeOxygen === true) {
+      this.oxygen.run(this.loc.x, this.loc.y);
     }
   }
 

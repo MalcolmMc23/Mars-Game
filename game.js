@@ -78,7 +78,7 @@ class Game {
         new Platform(700, 400, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(750, 450, false, false, false, false, false)
+        new Platform(750, 450, false, true, false, false, false)
       );
       this.platform.push(
         new Platform(800, 500, false, false, false, false, true)
