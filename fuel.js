@@ -14,7 +14,7 @@ class Fuel {
 
   render() {
     if (this.done === false) {
-      fill(0, 0, 255);
+      fill(25, 175, 244);
       rect(this.loc.x, this.loc.y, this.w, this.h);
     }
   }

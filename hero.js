@@ -61,7 +61,7 @@ class Hero {
   }
   //this will show how much fuel you have
   showFuel() {
-    fill(0, 0, 255);
+    fill(25, 175, 244);
     rect(width - 100, 50, 60, 40);
     fill(10);
     textSize(25);
