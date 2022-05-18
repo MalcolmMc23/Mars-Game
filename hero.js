@@ -1,6 +1,6 @@
 //Mars Game
 class Hero {
-  constructor(heroImg) {
+  constructor(hWImg, hJImg) {
     this.loc = createVector(100, 100);
     this.acc = createVector(0, 0.1);
     this.vel = createVector(0, 0);
@@ -13,10 +13,11 @@ class Hero {
     this.oxFCount = 0; // oxygen frame counter
     this.ox = 100; // oxygen %
 
-    this.heroImg = heroImg;
-    for (let i = 0; i < this.heroImg.length; i++) {
-      this.heroW = this.heroImg[i].width - 25;
-      this.heroH = this.heroImg[i].height;
+    this.hWImg = hWImg;
+    this.hJImg = hJImg;
+    for (let i = 0; i < this.hWImg.length; i++) {
+      this.heroW = this.hWImg[i].width - 25;
+      this.heroH = this.hWImg[i].height;
     }
   }
   run() {
@@ -27,18 +28,18 @@ class Hero {
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
-    // for (let i = 0; i < this.heroImg.length; i++) {
+    // for (let i = 0; i < this.hWImg.length; i++) {
     //   fill(225, 20, 100);
     //   rect(
     //     this.loc.x,
     //     this.loc.y,
-    //     this.heroImg[i].width - 25,
-    //     this.heroImg[i].height
+    //     this.hWImg[i].width - 25,
+    //     this.hWImg[i].height
     //   );
     // }
     this.fCount++;
-    for (let i = 0; i < this.heroImg.length; i++) {
-      image(heroImg[this.hCount], this.loc.x - 20, this.loc.y);
+    for (let i = 0; i < this.hWImg.length; i++) {
+      image(hWImg[this.hCount], this.loc.x - 20, this.loc.y);
     }
     //adds one hero image every 10 frame
     if (this.isColliding()) {
@@ -107,6 +108,9 @@ class Hero {
 
   //++++++++++++++++++++++++++++++ jump callback
   jump() {
+    for (let i = 0; i < this.hJImg.length; i++) {
+      image(this.hJImg[i], this.loc.x - 20, this.loc.y);
+    }
     this.vel.y = -4;
     this.acc.y = 0.1;
   }

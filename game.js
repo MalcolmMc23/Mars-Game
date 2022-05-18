@@ -1,5 +1,5 @@
 class Game {
-  constructor(heroImg, bgImg, platImg) {
+  constructor(hWImg, hJImg, hIdleImg, bgImg, platImg) {
     this.gameState = 1;
     this.lvl = 1;
     this.rScore = 0;
@@ -7,7 +7,8 @@ class Game {
     this.bg;
     this.bgImg = bgImg;
     this.hero;
-    this.heroImg = heroImg;
+    this.hWImg = hWImg;
+    this.hJImg = hJImg;
     this.platform = [];
     //this.enemy = e;
     //this.oxygen = o;
@@ -20,7 +21,7 @@ class Game {
   initGame() {
     //$$$$$ add platforms
     this.bg = new Bg(this.bgImg);
-    this.hero = new Hero(this.heroImg);
+    this.hero = new Hero(this.hWImg, this.hJImg);
     //this.platform = new Platform();
     this.loadPlatform(16);
   }

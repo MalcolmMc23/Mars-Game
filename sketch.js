@@ -5,8 +5,10 @@
 
 // globals
 let rGame;
-const heroImg = [];
+const hWImg = [];
 const bgImg = [];
+const hJImg = [];
+const hIdleImg = [];
 let platImg;
 let buttPlay;
 let playInst;
@@ -19,7 +21,14 @@ function preload() {
   //   }
 
   for (let i = 0; i < 6; i++) {
-    heroImg[i] = loadImage("hero/walk/h" + i + ".png");
+    hWImg[i] = loadImage("hero/walk/h" + i + ".png");
+  }
+  for (let i = 0; i < 5; i++) {
+    hJImg[i] = loadImage("hero/jump/h" + i + ".png");
+  }
+
+  for (let i = 0; i < 2; i++) {
+    hIdleImg[i] = loadImage("hero/jump/h" + i + ".png");
   }
 
   for (let i = 0; i < 4; i++) {
@@ -31,7 +40,7 @@ function preload() {
 function setup() {
   var cnv = createCanvas(900, 600);
   cnv.position((windowWidth - width) / 2, 10);
-  rGame = new Game(heroImg, bgImg, platImg);
+  rGame = new Game(hWImg, hJImg, hIdleImg, bgImg, platImg);
   frameRate(30);
   gameState = 1;
 
