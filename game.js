@@ -9,6 +9,7 @@ class Game {
     this.hero;
     this.hWImg = hWImg;
     this.hJImg = hJImg;
+    this.hIdleImg = hIdleImg;
     this.platform = [];
     //this.enemy = e;
     //this.oxygen = o;
@@ -21,7 +22,7 @@ class Game {
   initGame() {
     //$$$$$ add platforms
     this.bg = new Bg(this.bgImg);
-    this.hero = new Hero(this.hWImg, this.hJImg);
+    this.hero = new Hero(this.hWImg, this.hJImg, this.hIdleImg);
     //this.platform = new Platform();
     this.loadPlatform(16);
   }

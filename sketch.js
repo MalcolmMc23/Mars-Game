@@ -124,6 +124,7 @@ function keyPressed() {
     }
     if (rGame.hero.jumpCount < 1) {
       rGame.hero.jumpCount++;
+      console.log("trying to jump");
       rGame.hero.jump();
     }
   }
