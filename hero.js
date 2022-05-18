@@ -10,6 +10,9 @@ class Hero {
     this.iFCount = 0;
     this.iHCount = 0;
 
+    this.jFCount = 0;
+    this.jHCount = 0;
+
     this.jumpCount = 0; //jump counter
 
     this.fuelCount = 1; // fuel counter
@@ -57,7 +60,10 @@ class Hero {
           this.fCount = 0;
         }
         //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% walking ^
-      } else {
+      } else if (
+        (this.isColliding() && keyIsDown(RIGHT_ARROW) == false) ||
+        keyIsDown(LEFT_ARROW)
+      ) {
         //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idle \/
         this.iFCount++;
         for (let i = 0; i < this.hIdleImg.length; i++) {
@@ -68,6 +74,17 @@ class Hero {
             this.iHCount = 0;
           }
           this.iFCount = 0;
+        } else if (this.isColliding() === false) {
+          this.jFCount++;
+          for (let i = 0; i < this.hJImg.length; i++) {
+            image(this.hJImg[this.jHCount], this.loc.x - 20, this.loc.y);
+          }
+          if (this.jFCount >= 3) {
+            if (++this.jHCount >= this.hJImg.length) {
+              this.jHCount = 0;
+            }
+            this.jFCount = 0;
+          }
         }
         //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idle ^
       }
