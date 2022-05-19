@@ -146,7 +146,7 @@ class Hero {
         this.loc.y + this.heroH > rGame.platform[i].loc.y &&
         this.loc.y < rGame.platform[i].loc.y + 10 &&
         this.loc.x + this.heroW > rGame.platform[i].loc.x &&
-        this.loc.x < rGame.platform[i].loc.x + 60
+        this.loc.x < rGame.platform[i].loc.x + 80
       ) {
         return true;
       }

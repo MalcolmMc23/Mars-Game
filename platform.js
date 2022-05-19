@@ -5,7 +5,7 @@ class Platform {
     this.vel = createVector(0, 0);
     this.loc = createVector(x, y);
     this.h = 10;
-    this.w = 60;
+    this.w = 80;
     this.makeRock = r;
     this.makeOxygen = o;
     this.makeTrap = t;
