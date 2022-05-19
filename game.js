@@ -30,35 +30,28 @@ class Game {
   loadPlatform(n) {
     for (let i = 0; i < 1; i++) {
       //this.platforms.push(new Platform(x, y,   r,    o,     t,     f,     e))
-      this.platform[0] = new Platform(
-        50,
-        150,
-        true,
-        false,
-        false,
-        false,
-        false
+      this.platform[0] = new Platform(75, 275, false, false, false, false, false);
+
+      this.platform.push(
+        new Platform(150,100, true, false, false, false, false)
       );
       this.platform.push(
-        new Platform(75, 200, false, false, false, true, false)
+        new Platform(225, 175, false, false, false, false, true)
       );
       this.platform.push(
-        new Platform(150, 250, false, false, true, false, false)
+        new Platform(250, 500, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(200, 300, false, false, true, false, false)
+        new Platform(175, 575, true, false, false, false, false)
       );
       this.platform.push(
-        new Platform(250, 350, false, false, false, false, false)
-      );
-      this.platform.push(
-        new Platform(300, 400, false, false, false, false, false)
+        new Platform(400, 300, false, false, false, true, false)
       );
       this.platform.push(
         new Platform(350, 450, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(400, 500, false, false, false, false, false)
+        new Platform(400, 500, false, true, false, false, false)
       );
       this.platform.push(
         new Platform(450, 150, true, false, false, false, false)
@@ -67,7 +60,7 @@ class Game {
         new Platform(500, 200, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(550, 250, false, false, false, true, false)
+        new Platform(550, 250, false, false, false, false, false)
       );
       this.platform.push(
         new Platform(600, 300, false, false, false, false, false)
@@ -79,7 +72,7 @@ class Game {
         new Platform(700, 400, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(750, 450, false, true, false, false, false)
+        new Platform(750, 450, false, false, false, false, false)
       );
       this.platform.push(
         new Platform(800, 500, false, false, false, false, true)
