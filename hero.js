@@ -27,6 +27,8 @@ class Hero {
       this.heroW = this.hWImg[i].width - 25;
       this.heroH = this.hWImg[i].height;
     }
+
+    this.isJumping = true;
   }
   run() {
     this.update();
@@ -67,17 +69,20 @@ class Hero {
         //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idle \/
         this.iFCount++;
         for (let i = 0; i < this.hIdleImg.length; i++) {
-          image(this.hIdleImg[this.iHCount], this.loc.x - 20, this.loc.y);
+          image(this.hIdleImg[this.iHCount], this.loc.x, this.loc.y);
         }
-        if (this.iFCount >= 3) {
+        if (this.iFCount >= 10) {
           if (++this.iHCount >= this.hIdleImg.length) {
             this.iHCount = 0;
           }
           this.iFCount = 0;
-        } else if (this.isColliding() === false) {
+          //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idle ^
+        }
+        if (this.isJumping === true) {
           this.jFCount++;
           for (let i = 0; i < this.hJImg.length; i++) {
             image(this.hJImg[this.jHCount], this.loc.x - 20, this.loc.y);
+            console.log("im here");
           }
           if (this.jFCount >= 3) {
             if (++this.jHCount >= this.hJImg.length) {
@@ -86,7 +91,6 @@ class Hero {
             this.jFCount = 0;
           }
         }
-        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idle ^
       }
     }
     // this.fCount2++;
@@ -148,6 +152,7 @@ class Hero {
         this.loc.x + this.heroW > rGame.platform[i].loc.x &&
         this.loc.x < rGame.platform[i].loc.x + 80
       ) {
+        this.isJumping = false;
         return true;
       }
     }
