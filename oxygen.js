@@ -42,7 +42,7 @@ class Oxygen {
       }
     return false;
     }
-  if(keyCode = 8) {
+  if(keyPressed = 8) {
       this.oxygen = false;
     }
 }
