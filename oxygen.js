@@ -3,13 +3,16 @@ class Oxygen {
     this.w = 15;
     this.h = 15;
     this.done = false;
+    this.oxygen = true;
   }
-
   run(x, y) {
+  if (this.oxygen === true) {
     this.pLoc = createVector(x, y);
     this.loc = createVector(this.pLoc.x + 20, this.pLoc.y - 20);
     this.render();
     this.update();
+    }
+
   }
   render() {
     if (this.done === false) {
@@ -25,7 +28,6 @@ class Oxygen {
       this.done = true;
     }
   }
-
   isGrabbing() {
     //  test for collision between player and the ox
     if (this.done === false) {
@@ -36,9 +38,12 @@ class Oxygen {
         rGame.hero.loc.x < this.loc.x + this.w
       ) {
         return true;
+        }
       }
-    }
     return false;
-  }
+    }
+  if(keyCode = 8) {
+      this.oxygen = false;
+    }
 }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ class
