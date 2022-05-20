@@ -27,8 +27,8 @@ function preload() {
     hJImg[i] = loadImage("hero/jump/h" + i + ".png");
   }
 
-  for (let i = 0; i < 2; i++) {
-    hIdleImg[i] = loadImage("hero/jump/h" + i + ".png"); //TODO this should be the idle file not the jump
+  for (let i = 0; i < 4; i++) {
+    hIdleImg[i] = loadImage("hero/idle/h" + i + ".png"); //TODO this should be the idle file not the jump
   }
 
   for (let i = 0; i < 4; i++) {

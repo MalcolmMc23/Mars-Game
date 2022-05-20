@@ -88,7 +88,7 @@ class Hero {
         for (let i = 0; i < this.hIdleImg.length; i++) {
           image(this.hIdleImg[this.iHCount], this.loc.x, this.loc.y);
         }
-        if (this.iFCount >= 15) {
+        if (this.iFCount >= 10) {
           if (++this.iHCount >= this.hIdleImg.length) {
             this.iHCount = 0;
           }
@@ -146,7 +146,7 @@ class Hero {
   isColliding() {
     for (let i = 0; i < rGame.platform.length; i++) {
       if (
-        // this.vel.y > 0 &&
+        this.vel.y >= -this.vel.y &&
         this.loc.y + this.heroH > rGame.platform[i].loc.y &&
         this.loc.y < rGame.platform[i].loc.y + 10 &&
         this.loc.x + this.heroW > rGame.platform[i].loc.x &&
