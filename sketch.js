@@ -51,7 +51,7 @@ function setup() {
   frameRate(30);
   gameState = 1;
 
-  buttPlay = new Button("Play", width - 250, 450, 150, 50, 180);
+  buttPlay = new Button("Play", width - 455, 330, 300, 275, 500);
   playInst = new Button("Instructions", 150, 450, 150, 50, 180);
   buttAgain = new Button("Play Again", 400, 150, 200, 300, 450, 50, 200);
   back = new Button("Back", 500, 500, 100, 50, 180);
@@ -79,18 +79,6 @@ function startGame() {
 
   fill(0);
   text("Instructions", 150, 485);
-
-  text("Play", 700, 485);
-
-  fill(244, 63, 25);
-  text("Artists: Keana, Isaiah, and Lucas", 50, 150);
-
-  fill(244, 63, 25);
-  text("Coders: Malcolm McDoanld and Shane Frey", 50, 100);
-
-  fill(244, 63, 25);
-  textSize(75);
-  text("Exploring the Marineris", 75, 350);
 }
 
 function playGame() {
@@ -141,6 +129,7 @@ function keyPressed() {
 
 function mouseMoved() {
   if (buttPlay.mouseOverButton()) {
+
     buttPlay.clr = color(25, 175, 244);
   } else {
     buttPlay.clr = color(244, 63, 25);
