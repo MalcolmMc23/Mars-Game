@@ -33,7 +33,7 @@ class Game {
       this.platform[0] = new Platform(75, 275, false, false, false, false, false);
 
       this.platform.push(
-        new Platform(150,100, true, false, false, false, false)
+        new Platform(150,100, false, true, false, false, false)
       );
       this.platform.push(
         new Platform(225, 175, false, false, false, false, true)
@@ -54,13 +54,13 @@ class Game {
         new Platform(400, 500, false, true, false, false, false)
       );
       this.platform.push(
-        new Platform(450, 150, true, false, false, false, false)
+        new Platform(450, 50, true, false, false, false, false)
       );
       this.platform.push(
-        new Platform(500, 200, false, false, false, false, false)
+        new Platform(550, 550, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(550, 250, false, false, false, false, false)
+        new Platform(600, 100, false, false, false, false, false)
       );
       this.platform.push(
         new Platform(600, 300, false, false, false, false, false)
