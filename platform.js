@@ -52,10 +52,10 @@ class Platform {
   //++++++++++++++++++++++++++++++++++++++++++Platforms move with arrow keys
   move() {
     if (keyIsDown(RIGHT_ARROW)) {
-      this.loc.x = this.loc.x - 10;
+      this.loc.x = this.loc.x - 5;
     }
     if (keyIsDown(LEFT_ARROW)) {
-      this.loc.x = this.loc.x + 10;
+      this.loc.x = this.loc.x + 5;
     }
   }
 

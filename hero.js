@@ -161,8 +161,8 @@ class Hero {
   }
   //++++++++++++++++++++++++++++++ jump callback
   jump() {
-    this.loc.y = this.loc.y - 3;
-    this.vel.y = -4;
+    this.loc.y = this.loc.y - 2;
+    this.vel.y = -3.5;
     this.acc.y = 0.1;
   }
 }

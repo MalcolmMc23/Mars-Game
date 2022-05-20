@@ -21,10 +21,10 @@ class Bg {
     this.loc14 = createVector(width, 0);
     this.loc15 = createVector(0 - width, 0);
 
-    this.vel1 = createVector(2, 0);
-    this.vel2 = createVector(5, 0);
-    this.vel3 = createVector(7, 0);
-    this.vel4 = createVector(9, 0);
+    this.vel1 = createVector(1, 0);
+    this.vel2 = createVector(3, 0);
+    this.vel3 = createVector(5, 0);
+    this.vel4 = createVector(7, 0);
   }
 
   run() {
