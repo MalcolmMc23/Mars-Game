@@ -33,19 +33,36 @@ class Hero {
   run() {
     this.update();
     this.render();
+    this.checkEdges();
     this.showFuel();
     this.showOx();
+    this.showSpeed();
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
-    for (let i = 0; i < this.hWImg.length; i++) {
-      fill(225, 20, 100);
-      rect(
-        this.loc.x,
-        this.loc.y,
-        this.hWImg[i].width - 25,
-        this.hWImg[i].height
-      );
+    // for (let i = 0; i < this.hWImg.length; i++) {
+    //   fill(225, 20, 100);
+    //   rect(
+    //     this.loc.x,
+    //     this.loc.y,
+    //     this.hWImg[i].width - 25,
+    //     this.hWImg[i].height
+    //   );
+    // }
+    if (this.isJumping === true) {
+      //TODO remove the last 2 images for jumping
+      this.jFCount++;
+      for (let i = 0; i < this.hJImg.length; i++) {
+        image(this.hJImg[this.jHCount], this.loc.x, this.loc.y);
+      }
+      if (this.jFCount >= 15) {
+        if (this.jHCount === 2) {
+          this.jHCount = 2;
+        } else {
+          this.jHCount++;
+        }
+        this.jFCount = 0;
+      }
     }
     //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% walking \/
     if (this.isColliding()) {
@@ -71,50 +88,27 @@ class Hero {
         for (let i = 0; i < this.hIdleImg.length; i++) {
           image(this.hIdleImg[this.iHCount], this.loc.x, this.loc.y);
         }
-        if (this.iFCount >= 10) {
+        if (this.iFCount >= 15) {
           if (++this.iHCount >= this.hIdleImg.length) {
             this.iHCount = 0;
           }
           this.iFCount = 0;
           //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idle ^
         }
-        if (this.isJumping === true) {
-          this.jFCount++;
-          for (let i = 0; i < this.hJImg.length; i++) {
-            image(this.hJImg[this.jHCount], this.loc.x - 20, this.loc.y);
-            console.log("im here");
-          }
-          if (this.jFCount >= 3) {
-            if (++this.jHCount >= this.hJImg.length) {
-              this.jHCount = 0;
-            }
-            this.jFCount = 0;
-          }
-        }
       }
     }
-    // this.fCount2++;
-    // for (let i = 0; i < this.hJImg.length; i++) {
-    //   image(this.hJImg[this.hCount2], this.loc.x - 20, this.loc.y);
-    // }
-    // if (this.vel.y > 0) {
-    //   if (this.fCount2 >= 3) {
-    //     if (++this.hCount2 >= this.hJImg.length) {
-    //       this.hCount2 = 0;
-    //     }
-    //     this.fCount2 = 0;
-    //   }
-    // }
   }
   //+++++++++++++++++++++++++++++++++++++++++++++++Colliding code
   update() {
     if (this.isColliding()) {
       this.vel.y = 0;
+      // this.loc.add(this.vel);
+      // this.vel.add(this.acc);
       this.jumpCount = 0;
     } else {
       this.loc.add(this.vel);
       this.vel.add(this.acc);
-      this.vel.limit(10);
+      this.vel.limit(5);
     }
   }
 
@@ -142,6 +136,12 @@ class Hero {
       gameState = 3;
     }
   }
+  showSpeed() {
+    fill(2);
+    textSize(20);
+    text("vel = " + floor(this.vel.y), 300, 100);
+    text("acc = " + this.acc.y, 400, 100);
+  }
   //++++++++++++++++++++++++++++++When the hero hits the platform from above or below
   isColliding() {
     for (let i = 0; i < rGame.platform.length; i++) {
@@ -156,8 +156,14 @@ class Hero {
         return true;
       }
     }
-
+    this.isJumping = true;
     return false;
+  }
+  checkEdges() {
+    // if (this.loc.x < 0) gameState = 3;
+    // if (this.loc.x > width) gameState = 3;
+    if (this.loc.y < 0) gameState = 3;
+    if (this.loc.y > height) gameState = 3;
   }
   //++++++++++++++++++++++++++++++ jump callback
   jump() {

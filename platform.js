@@ -44,8 +44,8 @@ class Platform {
   }
   //++++++++++++++++++++++++++++++++++++++++++++Color and Location
   render() {
-    fill(0, 100, 240);
-    rect(this.loc.x, this.loc.y, this.w, this.h);
+    // fill(0, 100, 240);
+    // rect(this.loc.x, this.loc.y, this.w, this.h);
 
     image(platImg, this.loc.x, this.loc.y);
   }
