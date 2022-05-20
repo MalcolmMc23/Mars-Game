@@ -9,6 +9,8 @@ const hWImg = [];
 const bgImg = [];
 const hJImg = [];
 const hIdleImg = [];
+let startImg;
+let endImg;
 let platImg;
 let buttPlay;
 let playInst;
@@ -34,6 +36,11 @@ function preload() {
   for (let i = 0; i < 4; i++) {
     bgImg[i] = loadImage("background/b" + i + ".png");
   }
+
+  startImg = loadImage("splash/start.png");
+
+  endImg = loadImage("splash/end.png");
+
   platImg = loadImage("platform/p0.png");
 }
 
@@ -66,6 +73,7 @@ function draw() {
 function startGame() {
   //  rGame.run();
   background(0);
+  image(startImg, 0, 0);
   playInst.run();
   buttPlay.run();
 
@@ -91,6 +99,7 @@ function playGame() {
 
 function endGame() {
   background(0, 0, 0);
+  image(endImg, 0, 0);
   buttAgain.run();
   fill(0);
   text("Play Again", 450, 300);
