@@ -23,12 +23,12 @@ function preload() {
   for (let i = 0; i < 6; i++) {
     hWImg[i] = loadImage("hero/walk/h" + i + ".png");
   }
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 3; i++) {
     hJImg[i] = loadImage("hero/jump/h" + i + ".png");
   }
 
   for (let i = 0; i < 2; i++) {
-    hIdleImg[i] = loadImage("hero/jump/h" + i + ".png");
+    hIdleImg[i] = loadImage("hero/jump/h" + i + ".png"); //TODO this should be the idle file not the jump
   }
 
   for (let i = 0; i < 4; i++) {
@@ -92,8 +92,6 @@ function playGame() {
 function endGame() {
   background(0, 0, 0);
   buttAgain.run();
-  console.log("helloworld");
-
   fill(0);
   text("Play Again", 450, 300);
 }
@@ -118,13 +116,15 @@ function intGame() {
 function keyPressed() {
   if (keyIsDown(UP_ARROW)) {
     //maybe add a new function for fuel so you jump higher
-    if (rGame.hero.fuelCount >= 1 && rGame.hero.jumpCount == 1) {
+    if (
+      (rGame.hero.fuelCount >= 1 && rGame.hero.jumpCount === 1) ||
+      (rGame.hero.fuelCount >= 1 && rGame.hero.isJumping === true)
+    ) {
       rGame.hero.fuelCount--;
       rGame.hero.jump();
     }
-    if (rGame.hero.jumpCount < 1) {
+    if (rGame.hero.jumpCount < 1 && rGame.hero.isColliding()) {
       rGame.hero.jumpCount++;
-      console.log("trying to jump");
       rGame.hero.jump();
     }
   }
