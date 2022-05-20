@@ -2,7 +2,7 @@
 class Platform {
   constructor(x, y, r, o, t, f, e) {
     this.acc = createVector(0, 0.1);
-    this.vel = createVector(0, 0);
+    this.vel = createVector(5, 0);
     this.loc = createVector(x, y);
     this.h = 10;
     this.w = 80;
@@ -52,10 +52,10 @@ class Platform {
   //++++++++++++++++++++++++++++++++++++++++++Platforms move with arrow keys
   move() {
     if (keyIsDown(RIGHT_ARROW)) {
-      this.loc.x = this.loc.x - 5;
+      this.loc.x = this.loc.x - this.vel.x;
     }
     if (keyIsDown(LEFT_ARROW)) {
-      this.loc.x = this.loc.x + 5;
+      this.loc.x = this.loc.x + this.vel.x;
     }
   }
 

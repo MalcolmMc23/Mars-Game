@@ -1,5 +1,5 @@
 class Game {
-  constructor(hWImg, hJImg, hIdleImg, bgImg, platImg) {
+  constructor(hWImg, hJImg, hIdleImg, bgImg, platImg, sleepImg) {
     this.gameState = 1;
     this.lvl = 1;
     this.rScore = 0;
@@ -10,6 +10,7 @@ class Game {
     this.hWImg = hWImg;
     this.hJImg = hJImg;
     this.hIdleImg = hIdleImg;
+    this.sleepImg = sleepImg;
     this.platform = [];
     //this.enemy = e;
     //this.oxygen = o;
@@ -22,7 +23,7 @@ class Game {
   initGame() {
     //$$$$$ add platforms
     this.bg = new Bg(this.bgImg);
-    this.hero = new Hero(this.hWImg, this.hJImg, this.hIdleImg);
+    this.hero = new Hero(this.hWImg, this.hJImg, this.hIdleImg, this.sleepImg);
     //this.platform = new Platform();
     this.loadPlatform(16);
   }
@@ -30,10 +31,18 @@ class Game {
   loadPlatform(n) {
     for (let i = 0; i < 1; i++) {
       //this.platforms.push(new Platform(x, y,   r,    o,     t,     f,     e))
-      this.platform[0] = new Platform(75, 275, false, false, false, false, false);
+      this.platform[0] = new Platform(
+        75,
+        275,
+        false,
+        false,
+        false,
+        false,
+        false
+      );
 
       this.platform.push(
-        new Platform(150,100, false, true, false, false, false)
+        new Platform(150, 100, false, true, false, false, false)
       );
       this.platform.push(
         new Platform(225, 175, false, false, false, false, true)

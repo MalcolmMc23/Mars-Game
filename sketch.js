@@ -9,6 +9,7 @@ const hWImg = [];
 const bgImg = [];
 const hJImg = [];
 const hIdleImg = [];
+const sleepImg = [];
 let startImg;
 let endImg;
 let platImg;
@@ -18,10 +19,6 @@ let buttAgain;
 let back;
 
 function preload() {
-  //   for(let i = 0 ; i < 5 ; i++) {
-  //     bgImg[i] = loadImage("images/background/b" + i + ".png")
-  //   }
-
   for (let i = 0; i < 6; i++) {
     hWImg[i] = loadImage("hero/walk/h" + i + ".png");
   }
@@ -31,6 +28,10 @@ function preload() {
 
   for (let i = 0; i < 4; i++) {
     hIdleImg[i] = loadImage("hero/idle/h" + i + ".png"); //TODO this should be the idle file not the jump
+  }
+
+  for (let i = 0; i < 4; i++) {
+    sleepImg[i] = loadImage("hero/sleep/h" + i + ".png");
   }
 
   for (let i = 0; i < 4; i++) {
@@ -47,7 +48,7 @@ function preload() {
 function setup() {
   var cnv = createCanvas(900, 600);
   cnv.position((windowWidth - width) / 2, 10);
-  rGame = new Game(hWImg, hJImg, hIdleImg, bgImg, platImg);
+  rGame = new Game(hWImg, hJImg, hIdleImg, bgImg, platImg, sleepImg);
   frameRate(30);
   gameState = 1;
 
@@ -129,7 +130,6 @@ function keyPressed() {
 
 function mouseMoved() {
   if (buttPlay.mouseOverButton()) {
-
     buttPlay.clr = color(25, 175, 244);
   } else {
     buttPlay.clr = color(244, 63, 25);

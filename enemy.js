@@ -25,7 +25,8 @@ class Enemy {
     this.acc.limit(1);
 
     if (this.isHitting()) {
-      gameState = 3;
+      rGame.hero.runSleep();
+      // gameState = 3;
     }
   }
 
