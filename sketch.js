@@ -10,7 +10,7 @@ const bgImg = [];
 const hJImg = [];
 const hIdleImg = [];
 const sleepImg = [];
-const rovImg = [];
+const roverImg = [];
 let startImg;
 let endImg;
 let platImg;
@@ -19,6 +19,8 @@ let buttPlay;
 let playInst;
 let buttAgain;
 let back;
+
+//TODO  ######## ask for largger ox png  ########
 
 function preload() {
   for (let i = 0; i < 6; i++) {
@@ -30,19 +32,14 @@ function preload() {
   }
 
   for (let i = 0; i < 4; i++) {
-    hIdleImg[i] = loadImage("hero/idle/h" + i + ".png"); //TODO this should be the idle file not the jump
+    hIdleImg[i] = loadImage("hero/idle/h" + i + ".png");
   }
 
   for (let i = 0; i < 4; i++) {
     sleepImg[i] = loadImage("hero/sleep/h" + i + ".png");
   }
-  for (let i = 0; i < 1; i++) {
-
-    roverImg[i] = loadImage("rover/rover_right" + ".png");
-  }
-
-  for (let i = 0; i < 1; i++) {
-    roverImg[i] = loadImage("rover/rover_left" + ".png");
+  for (let i = 0; i < 2; i++) {
+    roverImg[i] = loadImage("rover/r" + i + ".png");
   }
 
   for (let i = 0; i < 4; i++) {

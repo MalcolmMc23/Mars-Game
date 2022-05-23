@@ -1,22 +1,31 @@
 class Enemy {
   constructor(x, y) {
-    this.w = 10;
-    this.h = 10;
+    this.w = 30;
+    this.h = 25;
     this.vel = createVector(0, 0);
     this.acc = createVector(0.5, 0);
   }
 
   run(x, y) {
     this.pLoc = createVector(x, y);
-    this.loc = createVector(this.pLoc.x + 20, this.pLoc.y - 10);
+    this.loc = createVector(this.pLoc.x + 20, this.pLoc.y - 25);
     this.update();
     this.render();
     this.checkEdges();
   }
 
   render() {
-    
-    rect(this.loc.x, this.loc.y, this.w, this.h);
+    // fill(0, 200, 0);
+    // rect(this.loc.x, this.loc.y, this.w, this.h);
+    if (this.acc.x <= 0) {
+      for (let i = 0; i < roverImg.length; i++) {
+        image(roverImg[0], this.loc.x - 5, this.loc.y - 5);
+      }
+    } else if (this.acc.x >= 0) {
+      for (let i = 0; i < roverImg.length; i++) {
+        image(roverImg[1], this.loc.x - 5, this.loc.y - 5);
+      }
+    }
   }
 
   update() {
@@ -34,7 +43,7 @@ class Enemy {
     if (this.loc.x <= this.pLoc.x) {
       this.acc.x = -this.acc.x;
     }
-    if (this.loc.x + this.w >= this.pLoc.x + 60) {
+    if (this.loc.x + this.w >= this.pLoc.x + 80) {
       this.acc.x = -this.acc.x;
     }
   }

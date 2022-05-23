@@ -141,11 +141,12 @@ class Hero {
   }
 
   showOx() {
-    fill(0, 200, 0);
-    rect(width - 100, 150, 60, 40);
+    // fill(0, 200, 0);
+    // rect(width - 100, 150, 60, 40);
+    image(oxImg, 825, 100, 36, 80);
     fill(10);
-    textSize(20);
-    text(this.ox + "%", width - 95, 175);
+    textSize(15);
+    text(this.ox + "%", 830, 160);
     this.oxFCount++;
     if (this.oxFCount === 60) {
       this.ox = this.ox - 10;
@@ -182,7 +183,7 @@ class Hero {
   checkEdges() {
     // if (this.loc.x < 0) this.isSleeping();
     // if (this.loc.x > width) this.isSleeping();
-  //  if (this.loc.y < 0) this.isSleeping();
+    //  if (this.loc.y < 0) this.isSleeping();
     if (this.loc.y > height) this.runSleep();
     //gameState = 3;
   }
