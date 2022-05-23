@@ -1,7 +1,7 @@
 class Oxygen {
   constructor() {
-    this.w = 15;
-    this.h = 15;
+    this.w = 9;
+    this.h = 20;
     this.done = false;
     this.oxygen = true;
     this.oxImg = oxImg;

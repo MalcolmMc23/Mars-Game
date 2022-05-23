@@ -13,6 +13,7 @@ const sleepImg = [];
 let startImg;
 let endImg;
 let platImg;
+let oxImg;
 let buttPlay;
 let playInst;
 let buttAgain;
@@ -43,6 +44,8 @@ function preload() {
   endImg = loadImage("splash/end.png");
 
   platImg = loadImage("platform/p0.png");
+
+  oxImg = loadImage("util/ox.png");
 }
 
 function setup() {
