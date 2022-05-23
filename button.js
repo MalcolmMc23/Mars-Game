@@ -13,9 +13,8 @@ class Button {
   }
 
   render() {
-  //  noFill();
+    noFill();
     ellipse(this.loc.x, this.loc.y, this.w, this.h);
-    fill(200, 0, 255);
     textSize(30);
   }
 
