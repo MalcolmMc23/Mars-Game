@@ -31,15 +31,7 @@ class Game {
   loadPlatform(n) {
     for (let i = 0; i < 1; i++) {
       //this.platforms.push(new Platform(x, y,   r,    o,     t,     f,     e))
-      this.platform[0] = new Platform(
-        75,
-        275,
-        false,
-        false,
-        false,
-        false,
-        false
-      );
+      this.platform[0] = new Platform(75, 275, false, false, false, false, false);
 
       this.platform.push(
         new Platform(150, 100, false, true, false, false, false)
@@ -72,16 +64,28 @@ class Game {
         new Platform(600, 100, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(600, 300, false, false, false, false, false)
+        new Platform(300, 300, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(650, 350, false, false, false, false, false)
+        new Platform(650, 500, false, false, false, false, false)
       );
       this.platform.push(
         new Platform(700, 400, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(750, 450, false, false, false, false, false)
+        new Platform(700, 200, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(800, 500, false, false, false, false, true)
+      );
+      this.platform.push(
+        new Platform(1000, 100, false, false, false, false, true)
+      );
+      this.platform.push(
+        new Platform(900, 550, false, false, false, false, true)
+      );
+      this.platform.push(
+        new Platform(1100, 300, false, false, false, false, true)
       );
       this.platform.push(
         new Platform(800, 500, false, false, false, false, true)
