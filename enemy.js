@@ -15,7 +15,7 @@ class Enemy {
   }
 
   render() {
-    fill(100, 0, 100);
+    
     rect(this.loc.x, this.loc.y, this.w, this.h);
   }
 

@@ -182,7 +182,7 @@ class Hero {
   checkEdges() {
     // if (this.loc.x < 0) this.isSleeping();
     // if (this.loc.x > width) this.isSleeping();
-    if (this.loc.y < 0) this.isSleeping();
+  //  if (this.loc.y < 0) this.isSleeping();
     if (this.loc.y > height) this.runSleep();
     //gameState = 3;
   }

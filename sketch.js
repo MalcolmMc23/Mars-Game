@@ -10,6 +10,7 @@ const bgImg = [];
 const hJImg = [];
 const hIdleImg = [];
 const sleepImg = [];
+const rovImg = [];
 let startImg;
 let endImg;
 let platImg;
@@ -23,6 +24,7 @@ function preload() {
   for (let i = 0; i < 6; i++) {
     hWImg[i] = loadImage("hero/walk/h" + i + ".png");
   }
+
   for (let i = 0; i < 3; i++) {
     hJImg[i] = loadImage("hero/jump/h" + i + ".png");
   }
@@ -33,6 +35,14 @@ function preload() {
 
   for (let i = 0; i < 4; i++) {
     sleepImg[i] = loadImage("hero/sleep/h" + i + ".png");
+  }
+  for (let i = 0; i < 1; i++) {
+
+    roverImg[i] = loadImage("rover/rover_right" + ".png");
+  }
+
+  for (let i = 0; i < 1; i++) {
+    roverImg[i] = loadImage("rover/rover_left" + ".png");
   }
 
   for (let i = 0; i < 4; i++) {
