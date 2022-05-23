@@ -13,7 +13,6 @@ const sleepImg = [];
 let startImg;
 let endImg;
 let platImg;
-let oxImg;
 let buttPlay;
 let playInst;
 let buttAgain;
@@ -28,7 +27,7 @@ function preload() {
   }
 
   for (let i = 0; i < 4; i++) {
-    hIdleImg[i] = loadImage("hero/idle/h" + i + ".png");
+    hIdleImg[i] = loadImage("hero/idle/h" + i + ".png"); //TODO this should be the idle file not the jump
   }
 
   for (let i = 0; i < 4; i++) {
@@ -44,14 +43,12 @@ function preload() {
   endImg = loadImage("splash/end.png");
 
   platImg = loadImage("platform/p0.png");
-
-  oxImg = loadImage("util/ox.png");
 }
 
 function setup() {
   var cnv = createCanvas(900, 600);
   cnv.position((windowWidth - width) / 2, 10);
-  rGame = new Game(hWImg, hJImg, hIdleImg, bgImg, platImg, sleepImg, oxImg);
+  rGame = new Game(hWImg, hJImg, hIdleImg, bgImg, platImg, sleepImg);
   frameRate(30);
   gameState = 1;
 
