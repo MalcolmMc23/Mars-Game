@@ -70,9 +70,9 @@ class Bg {
       this.loc11.sub(this.vel4);
       this.loc12.sub(this.vel4);
 
-      this.loc13.sub(this.vel5);
-      this.loc14.sub(this.vel5);
-      this.loc15.sub(this.vel5);
+      // this.loc13.sub(this.vel5);
+      // this.loc14.sub(this.vel5);
+      // this.loc15.sub(this.vel5);
     }
     if (keyIsDown(LEFT_ARROW)) {
       this.loc1.add(this.vel1);
@@ -91,10 +91,11 @@ class Bg {
       this.loc11.add(this.vel4);
       this.loc12.add(this.vel4);
 
-      this.loc13.add(this.vel5);
-      this.loc14.add(this.vel5);
-      this.loc15.add(this.vel5);
+      // this.loc13.add(this.vel5);
+      // this.loc14.add(this.vel5);
+      // this.loc15.add(this.vel5);
     }
+
     if (this.loc1.x <= -width) {
       this.loc1.x = width;
     }
@@ -133,6 +134,9 @@ class Bg {
     if (this.loc9.x > width * 2) {
       this.loc9.x = -width;
     }
+    if (this.loc9.x < -width) {
+      this.loc9.x = width * 2;
+    }
     if (this.loc10.x <= -width) {
       this.loc10.x = width;
     }
@@ -142,14 +146,18 @@ class Bg {
     if (this.loc12.x > width * 2) {
       this.loc12.x = -width;
     }
-    if (this.loc13.x <= -width) {
-      this.loc13.x = width;
+
+    if (this.loc12.x < -width) {
+      this.loc12.x = width * 2;
     }
-    if (this.loc14.x <= -width) {
-      this.loc14.x = width;
-    }
-    if (this.loc15.x > width * 2) {
-      this.loc15.x = -width;
-    }
+    // if (this.loc13.x <= -width) {
+    //   this.loc13.x = width;
+    // }
+    // if (this.loc14.x <= -width) {
+    //   this.loc14.x = width;
+    // }
+    // if (this.loc15.x > width * 2) {
+    //   this.loc15.x = -width;
+    // }
   }
 }
