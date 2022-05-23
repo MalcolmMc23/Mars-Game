@@ -4,20 +4,21 @@ class Oxygen {
     this.h = 15;
     this.done = false;
     this.oxygen = true;
+    this.oxImg = oxImg;
   }
   run(x, y) {
-  if (this.oxygen === true) {
-    this.pLoc = createVector(x, y);
-    this.loc = createVector(this.pLoc.x + 20, this.pLoc.y - 20);
-    this.render();
-    this.update();
+    if (this.oxygen === true) {
+      this.pLoc = createVector(x, y);
+      this.loc = createVector(this.pLoc.x + 40, this.pLoc.y - 30);
+      this.render();
+      this.update();
     }
-
   }
   render() {
     if (this.done === false) {
-      fill(0, 200, 0);
-      rect(this.loc.x, this.loc.y, this.w, this.h);
+      // fill(0, 200, 0);
+      // rect(this.loc.x, this.loc.y, this.w, this.h);
+      image(this.oxImg, this.loc.x, this.loc.y);
     }
   }
 
@@ -38,12 +39,12 @@ class Oxygen {
         rGame.hero.loc.x < this.loc.x + this.w
       ) {
         return true;
-        }
       }
+    }
     return false;
-    }
+  }
   if(keyPressed = 8) {
-      this.oxygen = false;
-    }
+    this.oxygen = false;
+  }
 }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ class

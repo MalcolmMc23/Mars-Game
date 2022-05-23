@@ -201,7 +201,7 @@ class Hero {
     for (let i = 0; i < rGame.sleepImg.length; i++) {
       image(this.sleepImg[this.sHCount], this.loc.x - 30, this.loc.y + 5);
 
-      if (this.sFCount >= 10) {
+      if (this.sFCount >= 5) {
         if (++this.sHCount >= rGame.sleepImg.length) {
           gameState = 3;
         }
