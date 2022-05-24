@@ -63,7 +63,7 @@ function setup() {
   gameState = 1;
 
   buttPlay = new Button("Play", width - 455, 330, 300, 275, 500);
-  playInst = new Button("Instructions", 150, 450, 150, 50, 180);
+  playInst = new Button("Instructions", 655, 475, 137, 125, 300);
   buttAgain = new Button("Play Again", 400, 150, 200, 300, 450, 50, 200);
   back = new Button("Back", 500, 500, 100, 50, 180);
 }
@@ -88,8 +88,6 @@ function startGame() {
   playInst.run();
   buttPlay.run();
 
-  fill(0);
-  text("Instructions", 150, 485);
 }
 
 function playGame() {
@@ -100,8 +98,6 @@ function endGame() {
   background(0, 0, 0);
   image(endImg, 0, 0);
   buttAgain.run();
-  fill(0);
-  text("Play Again", 450, 300);
 }
 
 function intGame() {
@@ -140,25 +136,25 @@ function keyPressed() {
 
 function mouseMoved() {
   if (buttPlay.mouseOverButton()) {
-    buttPlay.clr = color(25, 175, 244);
+    buttPlay.clr = color(0, 200, 0);
   } else {
-    buttPlay.clr = color(244, 63, 25);
+    buttPlay.clr = color(175, 50, 0);
   }
   if (back.mouseOverButton()) {
-    back.clr = color(25, 175, 244);
+    back.clr = color(0, 200, 0);
   } else {
-    back.clr = color(244, 63, 25);
+    back.clr = color(175, 50, 0);
   }
 
   if (playInst.mouseOverButton()) {
-    playInst.clr = color(25, 175, 244);
+    playInst.clr = color(0, 200, 0);
   } else {
-    playInst.clr = color(244, 63, 25);
+    playInst.clr = color(175, 50, 0);
   }
   if (buttAgain.mouseOverButton()) {
-    buttAgain.clr = color(25, 175, 244);
+    buttAgain.clr = color(0, 200, 0);
   } else {
-    buttAgain.clr = color(244, 63, 25);
+    buttAgain.clr = color(175, 50, 0);
   }
 }
 
@@ -169,7 +165,6 @@ function mousePressed() {
   if (gameState === 1) {
     if (playInst.mouseOverButton()) {
       gameState = 4;
-      console.log("show Instructions");
     }
   }
   if (back.mouseOverButton()) {

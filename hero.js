@@ -157,11 +157,6 @@ class Hero {
       // gameState = 3;
     }
   }
-  showSpeed() {
-    fill(2);
-    textSize(20);
-    text("vel = " + floor(this.vel.y), 300, 100);
-    text("acc = " + this.acc.y, 400, 100);
   }
   //++++++++++++++++++++++++++++++When the hero hits the platform from above or below
   isColliding() {
