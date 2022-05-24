@@ -43,7 +43,6 @@ class Hero {
     this.checkEdges();
     this.showFuel();
     this.showOx();
-    this.showSpeed();
   }
   //+++++++++++++++++++++++++++++++++++++++++Loading the hero sprite
   render() {
@@ -134,7 +133,7 @@ class Hero {
   //this will show how much fuel you have
   showFuel() {
     fill(25, 175, 244);
-    rect(width - 100, 50, 60, 40);
+    rect(width - 100, 50, 20, 20);
     fill(10);
     textSize(25);
     text(this.fuelCount, width - 75, 80);

@@ -62,9 +62,9 @@ function setup() {
   frameRate(30);
   gameState = 1;
 
-  buttPlay = new Button("Play", width - 455, 330, 300, 275, 500);
-  playInst = new Button("Instructions", 655, 475, 137, 125, 300);
-  buttAgain = new Button("Play Again", 400, 150, 200, 300, 450, 50, 200);
+  buttPlay = new Button("Play", 290, 190, 300, 275, 500);
+  playInst = new Button("Instructions", 590, 410, 137, 125, 300);
+  buttAgain = new Button("Play Again", 290, 190, 300, 275, 500);
   back = new Button("Back", 500, 500, 100, 50, 180);
 }
 
@@ -134,7 +134,7 @@ function keyPressed() {
   }
 }
 
-function mouseMoved() {
+/* function mouseMoved() {
   if (buttPlay.mouseOverButton()) {
     buttPlay.clr = color(0, 200, 0);
   } else {
@@ -157,6 +157,7 @@ function mouseMoved() {
     buttAgain.clr = color(175, 50, 0);
   }
 }
+*/
 
 function mousePressed() {
   if (buttPlay.mouseOverButton()) {
@@ -165,6 +166,7 @@ function mousePressed() {
   if (gameState === 1) {
     if (playInst.mouseOverButton()) {
       gameState = 4;
+      console.log("show Instructions");
     }
   }
   if (back.mouseOverButton()) {
