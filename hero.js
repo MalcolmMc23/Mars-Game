@@ -157,7 +157,6 @@ class Hero {
       // gameState = 3;
     }
   }
-  }
   //++++++++++++++++++++++++++++++When the hero hits the platform from above or below
   isColliding() {
     for (let i = 0; i < rGame.platform.length; i++) {
