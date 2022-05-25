@@ -3,6 +3,7 @@ class Fuel {
     this.w = 15;
     this.h = 10;
     this.done = false;
+    this.fuelImg = fuelImg;
   }
 
   run(x, y) {
@@ -16,6 +17,7 @@ class Fuel {
     if (this.done === false) {
       fill(25, 175, 244);
       rect(this.loc.x, this.loc.y, this.w, this.h);
+      image(this.fuelImg, this.loc.x, this.loc.y);
     }
   }
 

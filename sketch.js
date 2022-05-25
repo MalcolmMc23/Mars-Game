@@ -56,9 +56,9 @@ function preload() {
 
   oxImg = loadImage("util/ox.png");
 
-  fuelImg = loadImage("util/ox.png");
+  fuelImg = loadImage("util/fuel.png");
 
-  rockImg = loadImage("util/ox.png");
+  rockImg = loadImage("util/rock.png");
 }
 
 function setup() {
@@ -139,8 +139,10 @@ function keyPressed() {
 }
 
 function mousePressed() {
-  if (buttPlay.mouseOverButton()) {
-    gameState = 2;
+  if (gameState === 1) {
+    if (buttPlay.mouseOverButton()) {
+      gameState = 2;
+    }
   }
   if (gameState === 1) {
     if (playInst.mouseOverButton()) {
