@@ -15,15 +15,14 @@ class Button {
   render() {
     noFill();
     noStroke();
-    stroke(this.clr);
-  //  rect(this.loc.x, this.loc.y, this.w, this.h);
+    rect(this.loc.x, this.loc.y, this.w, this.h);
     textSize(30);
   }
 
   mouseOverButton() {
-    if( mouseX > this.loc.x	 &&
+    if( mouseX > this.loc.x	    &&
       mouseX < this.loc.x + this.w &&
-      mouseY > this.loc.y &&
+      mouseY > this.loc.y     &&
       mouseY < this.loc.y + this.h) {
       return true;
     } else {

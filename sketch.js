@@ -83,11 +83,9 @@ function draw() {
 
 function startGame() {
   //  rGame.run();
-  background(0);
   image(startImg, 0, 0);
   playInst.run();
   buttPlay.run();
-
 }
 
 function playGame() {
@@ -112,7 +110,7 @@ function intGame() {
   rect(95, 350, 575, 100);
   fill(0);
   textSize(20);
-  text("USE ARROW KEYS TO MOVE AROUND AND COLLECT ROCKS", 100, 200);
+  text("COLLET ALL ROCKS TO ESCAPE", 100, 200);
   textSize(25);
   text("WATCH OUT FOR TRAPS AND ENEMIES", 100, 400);
 }
@@ -134,31 +132,6 @@ function keyPressed() {
   }
 }
 
-/* function mouseMoved() {
-  if (buttPlay.mouseOverButton()) {
-    buttPlay.clr = color(0, 200, 0);
-  } else {
-    buttPlay.clr = color(175, 50, 0);
-  }
-  if (back.mouseOverButton()) {
-    back.clr = color(0, 200, 0);
-  } else {
-    back.clr = color(175, 50, 0);
-  }
-
-  if (playInst.mouseOverButton()) {
-    playInst.clr = color(0, 200, 0);
-  } else {
-    playInst.clr = color(175, 50, 0);
-  }
-  if (buttAgain.mouseOverButton()) {
-    buttAgain.clr = color(0, 200, 0);
-  } else {
-    buttAgain.clr = color(175, 50, 0);
-  }
-}
-*/
-
 function mousePressed() {
   if (buttPlay.mouseOverButton()) {
     gameState = 2;
@@ -172,7 +145,6 @@ function mousePressed() {
   if (back.mouseOverButton()) {
     gameState = 1;
   }
-  if (gameState === 3)
     if (buttAgain.mouseOverButton()) {
       window.location.reload();
     }
