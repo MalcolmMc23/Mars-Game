@@ -128,6 +128,10 @@ class Hero {
       this.vel.add(this.acc);
       this.vel.limit(5);
     }
+    //TODO add the number of rocks on x
+    // if (rGame.rScore === x) {
+    //   gameState = 5;
+    // }
   }
 
   //this will show how much fuel you have

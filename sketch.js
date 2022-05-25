@@ -84,6 +84,8 @@ function draw() {
   } else if (gameState === 4) {
     intGame();
     //console.log("incorrect game state");
+  } else if (gameState === 5) {
+    winGame();
   }
 }
 
@@ -119,6 +121,12 @@ function intGame() {
   text("COLLET ALL ROCKS TO ESCAPE", 100, 200);
   textSize(25);
   text("WATCH OUT FOR TRAPS AND ENEMIES", 100, 400);
+}
+
+function winGame() {
+  background(20);
+  textSize(50);
+  text("you won :)", width / 2, height / 2);
 }
 
 function keyPressed() {
