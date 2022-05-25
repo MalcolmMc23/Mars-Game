@@ -3,6 +3,7 @@ class Rock {
     this.w = 10;
     this.h = 10;
     this.done = false; // if rock is collectes, done = true
+    this.rockImg = rockImg;
   }
   run(x, y) {
     this.pLoc = createVector(x, y);
@@ -14,8 +15,9 @@ class Rock {
 
   render() {
     if (this.done === false) {
-      fill(255, 215, 0);
-      rect(this.loc.x, this.loc.y, this.w, this.h);
+      // fill(255, 215, 0);
+      // rect(this.loc.x, this.loc.y, this.w, this.h);
+      image(this.rockImg, this.loc.x, this.loc.y);
     }
   }
 
