@@ -15,6 +15,8 @@ let startImg;
 let endImg;
 let platImg;
 let oxImg;
+let fuelImg;
+let rockImg;
 let buttPlay;
 let playInst;
 let buttAgain;
@@ -53,6 +55,10 @@ function preload() {
   platImg = loadImage("platform/p0.png");
 
   oxImg = loadImage("util/ox.png");
+
+  fuelImg = loadImage("util/ox.png");
+
+  rockImg = loadImage("util/ox.png");
 }
 
 function setup() {
@@ -145,7 +151,9 @@ function mousePressed() {
   if (back.mouseOverButton()) {
     gameState = 1;
   }
+  if (gameState === 3) {
     if (buttAgain.mouseOverButton()) {
       window.location.reload();
     }
+  }
 }
