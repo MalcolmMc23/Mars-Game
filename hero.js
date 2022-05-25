@@ -2,7 +2,7 @@
 class Hero {
   constructor(hWImg, hJImg, hIdleImg, sleepImg) {
     this.loc = createVector(100, 100);
-    this.acc = createVector(0, 0.1);
+    this.acc = createVector(0, 0.2);
     this.vel = createVector(0, 0);
     this.hCount = 0; //image number
     this.fCount = 0; //frame counter
@@ -146,10 +146,10 @@ class Hero {
   showOx() {
     // fill(0, 200, 0);
     // rect(width - 100, 150, 60, 40);
-    image(oxImg, 825, 100, 36, 80);
+    image(bigOxImg, 825, 100);
     fill(10);
     textSize(15);
-    text(this.ox + "%", 830, 160);
+    text(this.ox + "%", 828, 160);
     this.oxFCount++;
     if (this.oxFCount === 60) {
       this.ox = this.ox - 10;
@@ -191,7 +191,16 @@ class Hero {
     this.acc.y = 0.1;
   }
 
+  rocket() {
+    this.loc.y = this.loc.y - 2;
+    this.vel.y = -3.5;
+    this.acc.y = 0.1;
+    // image(hRocketImg, this.loc.x - 20, this.loc.y);
+    // console.log("hello world");
+  }
+
   runSleep() {
+    // runs sleep animation
     this.sFCount++;
     if (this.sHCount >= 3) {
       gameState = 3;

@@ -15,8 +15,11 @@ let startImg;
 let endImg;
 let platImg;
 let oxImg;
+let bigOxImg;
 let fuelImg;
 let rockImg;
+let hRocketImg;
+
 let buttPlay;
 let playInst;
 let buttAgain;
@@ -56,9 +59,13 @@ function preload() {
 
   oxImg = loadImage("util/ox.png");
 
+  bigOxImg = loadImage("util/bigOx.png");
+
   fuelImg = loadImage("util/fuel.png");
 
   rockImg = loadImage("util/rock.png");
+
+  hRocketImg = loadImage("hero/jump/rocket/hRocket.png");
 }
 
 function setup() {
@@ -137,7 +144,7 @@ function keyPressed() {
       (rGame.hero.fuelCount >= 1 && rGame.hero.isJumping === true)
     ) {
       rGame.hero.fuelCount--;
-      rGame.hero.jump();
+      rGame.hero.rocket();
     }
     if (rGame.hero.jumpCount < 1 && rGame.hero.isColliding()) {
       rGame.hero.jumpCount++;

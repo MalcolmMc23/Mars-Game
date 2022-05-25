@@ -1,7 +1,7 @@
 class Oxygen {
   constructor() {
-    this.w = 9;
-    this.h = 20;
+    this.w = 13;
+    this.h = 29;
     this.done = false;
     this.oxygen = true;
     this.oxImg = oxImg;
@@ -9,7 +9,7 @@ class Oxygen {
   run(x, y) {
     if (this.oxygen === true) {
       this.pLoc = createVector(x, y);
-      this.loc = createVector(this.pLoc.x + 40, this.pLoc.y - 30);
+      this.loc = createVector(this.pLoc.x + 33, this.pLoc.y - 40);
       this.render();
       this.update();
     }
