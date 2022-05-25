@@ -88,13 +88,31 @@ class Game {
         new Platform(1100, 300, false, false, false, false, true)
       );
       this.platform.push(
-        new Platform(1200, 500, false, true, false, false, false)
+        new Platform(1200, 500, false, false, true, false, false)
       );
       this.platform.push(
         new Platform(1500, 100, true, false, false, false, false)
       );
       this.platform.push(
-        new Platform(1200, 500, false, false, false, false, false)
+        new Platform(1450, 350, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(1300, 500, false, true, false, false, false)
+      );
+      this.platform.push(
+        new Platform(1400, 400, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(1450, 550, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(1600, 200, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(1800, 400, false, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(2000, 300, false, false, false, false, false)
       );
     }
   }
