@@ -1,22 +1,22 @@
 class Fuel {
   constructor() {
-    this.w = 15;
-    this.h = 10;
+    this.w = 20;
+    this.h = 30;
     this.done = false;
     this.fuelImg = fuelImg;
   }
 
   run(x, y) {
     this.pLoc = createVector(x, y);
-    this.loc = createVector(this.pLoc.x + 30, this.pLoc.y - 20);
+    this.loc = createVector(this.pLoc.x + 30, this.pLoc.y - 40);
     this.render();
     this.update();
   }
 
   render() {
     if (this.done === false) {
-      fill(25, 175, 244);
-      rect(this.loc.x, this.loc.y, this.w, this.h);
+      // fill(25, 175, 244);
+      // rect(this.loc.x, this.loc.y, this.w, this.h);
       image(this.fuelImg, this.loc.x, this.loc.y);
     }
   }

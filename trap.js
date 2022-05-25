@@ -1,18 +1,19 @@
 class Trap {
   constructor() {
-    this.w = 20;
-    this.h = 20;
+    this.w = 80;
+    this.h = 2;
   }
 
   run(x, y) {
     this.pLoc = createVector(x, y); // passes in the platform location
-    this.loc = createVector(this.pLoc.x + 20, this.pLoc.y - 20);
+    this.loc = createVector(this.pLoc.x, this.pLoc.y - 2);
     this.render();
     this.update();
   }
 
   render() {
     fill(255, 0, 0);
+    noStroke();
     rect(this.loc.x, this.loc.y, this.w, this.h);
   }
   update() {
