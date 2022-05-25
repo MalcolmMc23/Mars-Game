@@ -135,7 +135,7 @@ class Game {
 
     fill(10);
     textSize(20);
-    text("you have " + this.rScore + " out of # rocks", 50, 50);
+    text(this.rScore + " out of # Rocks Collected", 50, 50);
   }
 }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ class
