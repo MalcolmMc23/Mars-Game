@@ -49,7 +49,7 @@ class Game {
         new Platform(400, 300, false, false, false, true, false)
       );
       this.platform.push(
-        new Platform(350, 450, false, false, false, false, false)
+        new Platform(350, 450, false, false, true, false, false)
       );
       this.platform.push(
         new Platform(400, 500, false, true, false, false, false)
@@ -76,10 +76,10 @@ class Game {
         new Platform(700, 200, false, true, false, false, false)
       );
       this.platform.push(
-        new Platform(800, 500, false, false, false, false, true)
+        new Platform(800, 500, false, true, false, false, true)
       );
       this.platform.push(
-        new Platform(1000, 100, false, false, false, false, true)
+        new Platform(1000, 100, false, false, false, false, false)
       );
       this.platform.push(
         new Platform(900, 550, false, false, false, false, true)
@@ -88,7 +88,13 @@ class Game {
         new Platform(1100, 300, false, false, false, false, true)
       );
       this.platform.push(
-        new Platform(800, 500, false, false, false, false, true)
+        new Platform(1200, 500, false, true, false, false, false)
+      );
+      this.platform.push(
+        new Platform(1500, 100, true, false, false, false, false)
+      );
+      this.platform.push(
+        new Platform(1200, 500, false, false, false, false, false)
       );
     }
   }
