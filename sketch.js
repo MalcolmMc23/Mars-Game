@@ -119,7 +119,7 @@ function endGame() {
 function intGame() {
   background(0);
   back.run();
-  fill(0);
+  fill(255);
   textSize(25);
   text("BACK", 510, 540);
   fill(244, 63, 25);
@@ -135,8 +135,8 @@ function intGame() {
 
 function winGame() {
   background(20);
-  textSize(50);
-  text("you won :)", width / 2, height / 2);
+  textSize(20);
+  text("CONGRADULATIONS YOU COLLECT ALL THE SAMPLES :)", width / 2, height / 2);
 }
 
 function keyPressed() {

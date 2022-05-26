@@ -64,7 +64,7 @@ class Game {
         new Platform(600, 100, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(300, 300, false, false, false, false, false)
+        new Platform(300, 300, false, true, false, false, false)
       );
       this.platform.push(
         new Platform(650, 500, true, false, false, false, false)
@@ -94,7 +94,7 @@ class Game {
         new Platform(1500, 100, true, false, false, false, false)
       );
       this.platform.push(
-        new Platform(1450, 350, false, false, false, false, false)
+        new Platform(1450, 350, false, true, false, false, false)
       );
       this.platform.push(
         new Platform(1300, 500, false, true, false, false, false)
