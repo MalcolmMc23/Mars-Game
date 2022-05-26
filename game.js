@@ -43,22 +43,22 @@ class Game {
         new Platform(250, 500, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(175, 575, true, false, false, false, false)
+        new Platform(175, 575, true, true, false, false, false)
       );
       this.platform.push(
         new Platform(400, 300, false, false, false, true, false)
       );
       this.platform.push(
-        new Platform(350, 450, false, false, true, false, false)
+        new Platform(350, 450, false, false, false, true, false)
       );
       this.platform.push(
-        new Platform(400, 500, false, true, false, false, false)
+        new Platform(400, 500, false, false, true, false, false)
       );
       this.platform.push(
         new Platform(450, 50, true, false, false, false, false)
       );
       this.platform.push(
-        new Platform(550, 550, false, false, false, false, false)
+        new Platform(550, 550, false, true, false, false, false)
       );
       this.platform.push(
         new Platform(600, 100, false, false, false, false, false)
@@ -67,13 +67,13 @@ class Game {
         new Platform(300, 300, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(650, 500, false, false, false, false, false)
+        new Platform(650, 500, true, false, false, false, false)
       );
       this.platform.push(
         new Platform(700, 400, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(700, 200, false, true, false, false, false)
+        new Platform(700, 200, false, false, false, true, false)
       );
       this.platform.push(
         new Platform(800, 500, false, true, false, false, true)
@@ -103,16 +103,34 @@ class Game {
         new Platform(1400, 400, false, false, false, false, false)
       );
       this.platform.push(
-        new Platform(1450, 550, false, false, false, false, false)
+        new Platform(1450, 550, false, true, false, false, false)
       );
       this.platform.push(
-        new Platform(1600, 200, false, false, false, false, false)
+        new Platform(1600, 200, false, false, false, false, true)
       );
       this.platform.push(
-        new Platform(1800, 400, false, false, false, false, false)
+        new Platform(1800, 400, false, false, false, true, false)
       );
       this.platform.push(
-        new Platform(2000, 300, false, false, false, false, false)
+        new Platform(2000, 300, false, false, false, true, false)
+      );
+      this.platform.push(
+        new Platform(2200, 400, false, true, false, false, false)
+      );
+      this.platform.push(
+        new Platform(2300, 500, false, true, false, false, false)
+      );
+      this.platform.push(
+        new Platform(2500, 300, false, false, false, true, false)
+      );
+      this.platform.push(
+        new Platform(2500, 550, false, false, false, true, false)
+      );
+      this.platform.push(
+        new Platform(2700, 250, false, false, false, true, false)
+      );
+      this.platform.push(
+        new Platform(3700, 250, true, false, false, false, false)
       );
     }
   }
@@ -159,7 +177,7 @@ class Game {
 
     fill(10);
     textSize(20);
-    text(this.rScore + " out of # Rocks Collected", 50, 50);
+    text(this.rScore + " out of 5 Rocks Collected", 50, 50);
   }
 }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ class
