@@ -9,16 +9,17 @@ const hWImg = [];
 const bgImg = [];
 const hJImg = [];
 const hIdleImg = [];
-const sleepImg = [];
-const roverImg = [];
+const dImg = [];
+const eImg = [];
 let startImg;
 let endImg;
 let platImg;
 let oxImg;
 let bigOxImg;
 let fuelImg;
-let rockImg;
-let hRocketImg;
+let bigFuelImg;
+let rImg;
+let hRJImg;
 
 let buttPlay;
 let playInst;
@@ -29,11 +30,11 @@ let back;
 
 function preload() {
   for (let i = 0; i < 6; i++) {
-    hWImg[i] = loadImage("hero/walk/h" + i + ".png");
+    hWImg[i] = loadImage("hero/walk/hW" + i + ".png");
   }
 
   for (let i = 0; i < 3; i++) {
-    hJImg[i] = loadImage("hero/jump/h" + i + ".png");
+    hJImg[i] = loadImage("hero/jump/hJ" + i + ".png");
   }
 
   for (let i = 0; i < 4; i++) {
@@ -41,10 +42,10 @@ function preload() {
   }
 
   for (let i = 0; i < 4; i++) {
-    sleepImg[i] = loadImage("hero/sleep/h" + i + ".png");
+    dImg[i] = loadImage("hero/dead/hD" + i + ".png");
   }
   for (let i = 0; i < 2; i++) {
-    roverImg[i] = loadImage("rover/r" + i + ".png");
+    eImg[i] = loadImage("enemy/e" + i + ".png");
   }
 
   for (let i = 0; i < 4; i++) {
@@ -63,15 +64,17 @@ function preload() {
 
   fuelImg = loadImage("util/fuel.png");
 
-  rockImg = loadImage("util/rock.png");
+  bigFuelImg = loadImage("util/bigFuel.png");
 
-  hRocketImg = loadImage("hero/jump/rocket/hRocket.png");
+  rImg = loadImage("util/rock.png");
+
+  hRJImg = loadImage("hero/jump/rocket/hRJ.png");
 }
 
 function setup() {
   var cnv = createCanvas(900, 600);
   cnv.position((windowWidth - width) / 2, 10);
-  rGame = new Game(hWImg, hJImg, hIdleImg, bgImg, platImg, sleepImg);
+  rGame = new Game(hWImg, hJImg, hIdleImg, bgImg, platImg, dImg);
   frameRate(30);
   gameState = 1;
 

@@ -3,7 +3,7 @@ class Rock {
     this.w = 10;
     this.h = 10;
     this.done = false; // if rock is collectes, done = true
-    this.rockImg = rockImg;
+    this.rockImg = rImg;
   }
   run(x, y) {
     this.pLoc = createVector(x, y);

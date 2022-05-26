@@ -18,12 +18,12 @@ class Enemy {
     // fill(0, 200, 0);
     // rect(this.loc.x, this.loc.y, this.w, this.h);
     if (this.acc.x <= 0) {
-      for (let i = 0; i < roverImg.length; i++) {
-        image(roverImg[0], this.loc.x - 5, this.loc.y - 5);
+      for (let i = 0; i < eImg.length; i++) {
+        image(eImg[0], this.loc.x - 5, this.loc.y - 5);
       }
     } else if (this.acc.x >= 0) {
-      for (let i = 0; i < roverImg.length; i++) {
-        image(roverImg[1], this.loc.x - 5, this.loc.y - 5);
+      for (let i = 0; i < eImg.length; i++) {
+        image(eImg[1], this.loc.x - 5, this.loc.y - 5);
       }
     }
   }
