@@ -128,7 +128,6 @@ class Hero {
       this.vel.add(this.acc);
       this.vel.limit(5);
     }
-    //TODO add the number of rocks on x
     if (rGame.rScore === 5) {
       gameState = 5;
     }
