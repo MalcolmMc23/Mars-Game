@@ -88,6 +88,7 @@ function setup() {
   playInst = new Button("Instructions", 590, 410, 137, 125, 300);
   buttAgain = new Button("Play Again", 290, 190, 300, 275, 500);
   back = new Button("Back", 500, 500, 100, 50, 180);
+  buttWin = new Button("Play Again", 290, 190, 300, 275, 500);
 }
 
 function draw() {
@@ -142,6 +143,7 @@ function intGame() {
 function winGame() {
   background(200);
   image(winImg, 0, 0);
+  buttWin.run();
 }
 
 function keyPressed() {
@@ -178,6 +180,11 @@ function mousePressed() {
   }
   if (gameState === 3) {
     if (buttAgain.mouseOverButton()) {
+      window.location.reload();
+    }
+  }
+  if (gameState === 5) {
+    if (buttWin.mouseOverButton()) {
       window.location.reload();
     }
   }
