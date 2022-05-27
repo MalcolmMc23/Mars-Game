@@ -18,6 +18,8 @@ class Game {
     //this.platform;
 
     this.initGame();
+    this.fC = 0;
+    this.timer = 0;
   }
 
   initGame() {
@@ -31,7 +33,15 @@ class Game {
   loadPlatform(n) {
     for (let i = 0; i < 1; i++) {
       //this.platforms.push(new Platform(x, y,   r,    o,     t,     f,     e))
-      this.platform[0] = new Platform(75, 275, false, false, false, false, false);
+      this.platform[0] = new Platform(
+        75,
+        275,
+        false,
+        false,
+        false,
+        false,
+        false
+      );
 
       this.platform.push(
         new Platform(150, 100, false, true, false, false, false)
@@ -178,6 +188,14 @@ class Game {
     fill(10);
     textSize(20);
     text(this.rScore + " out of 5 Rocks Collected", 50, 50);
+
+    this.fC++;
+    if (this.fC === 30) {
+      this.timer++;
+      this.fC = 0;
+    }
+    textSize(20);
+    text(this.timer, 100, 100);
   }
 }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ class
