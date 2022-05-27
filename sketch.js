@@ -134,7 +134,7 @@ function intGame() {
 }
 
 function winGame() {
-  background(20);
+  background(200);
   textSize(20);
   text("CONGRADULATIONS YOU COLLECT ALL THE SAMPLES :)", width / 2, height / 2);
 }
