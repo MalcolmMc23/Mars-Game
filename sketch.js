@@ -111,6 +111,8 @@ function startGame() {
   image(startImg, 0, 0);
   playInst.run();
   buttPlay.run();
+  fill(255);
+  text("PLAY", 410, 325);
 }
 
 function playGame() {
@@ -121,6 +123,8 @@ function endGame() {
   background(0, 0, 0);
   image(endImg, 0, 0);
   buttAgain.run();
+  fill(255);
+  text("PLAY AGAIN", 360, 340);
 }
 
 function intGame() {
@@ -144,6 +148,8 @@ function winGame() {
   background(200);
   image(winImg, 0, 0);
   buttWin.run();
+  fill(255);
+  text("PLAY AGAIN", 360, 340);
 }
 
 function keyPressed() {
