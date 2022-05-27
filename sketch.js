@@ -13,6 +13,7 @@ const dImg = [];
 const eImg = [];
 let startImg;
 let endImg;
+let winImg;
 let platImg;
 let oxImg;
 let bigOxImg;
@@ -20,6 +21,7 @@ let fuelImg;
 let bigFuelImg;
 let rImg;
 let hRJImg;
+let tImg;
 
 let buttPlay;
 let playInst;
@@ -69,6 +71,10 @@ function preload() {
   rImg = loadImage("util/rock.png");
 
   hRJImg = loadImage("hero/jump/rocket/hRJ.png");
+
+  tImg = loadImage("trap/t0.png");
+
+  winImg = loadImage("splash/win.png");
 }
 
 function setup() {
@@ -135,8 +141,7 @@ function intGame() {
 
 function winGame() {
   background(200);
-  textSize(20);
-  text("CONGRADULATIONS YOU COLLECT ALL THE SAMPLES :)", width / 2, height / 2);
+  image(winImg, 0, 0);
 }
 
 function keyPressed() {

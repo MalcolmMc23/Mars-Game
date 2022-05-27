@@ -15,6 +15,7 @@ class Trap {
     fill(255, 0, 0);
     noStroke();
     rect(this.loc.x, this.loc.y, this.w, this.h);
+    image(tImg, this.loc.x, this.loc.y);
   }
   update() {
     if (this.isHitting()) {

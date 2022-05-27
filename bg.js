@@ -26,7 +26,7 @@ class Bg {
   }
 
   render() {
-    background(20);
+    background(255, 199, 160);
     for (let i = 0; i < this.bgImg.length; i++) {
       image(this.bgImg[0], this.loc1.x, 0);
       image(this.bgImg[0], this.loc2.x, 0);
